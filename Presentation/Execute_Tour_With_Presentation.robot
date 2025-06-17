@@ -105,6 +105,7 @@ Execute Tour
     # Scroll to bottom and Save
     Swipe    1280    1295    1280    519    500
     Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    519    500
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 
     # Confirm return to Contact Page
