@@ -1,6 +1,6 @@
 *** Settings ***
 Library     AppiumLibrary
-Library     DoubleTapLibrary.py
+Library     Python_File/DoubleTapLibrary.py
 
 *** Variables ***
 ${CONTACT_NAME}         Sarah Thompson
