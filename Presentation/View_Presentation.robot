@@ -2,7 +2,7 @@
 Library     AppiumLibrary
 
 *** Test Cases ***
-View Presentation.
+Verify that user can view the presentation
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Presentations"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Presentations"]
     
