@@ -23,15 +23,15 @@ View Presentation
     Sleep    5s
 
     # Swipe left to move through slides
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
 
     # Swipe right to go back to a previous slide
-    Swipe    300    804    500    804    800
+    Swipe    300    804    500    804    100
     Sleep    10s
 
     # Double tap to pause the presentation playback
@@ -49,7 +49,7 @@ View Presentation
     Sleep    5s
 
     # Swipe to next slide again during playback
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
 
     # Double tap to bring up the finish option
