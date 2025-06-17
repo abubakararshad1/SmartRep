@@ -8,7 +8,7 @@ ${APPOINTMENT_DAY}      27
 
 *** Test Cases ***
 
-Create Tour Plan from Contact
+Verify that the user can view the planned tour in the Activity tab. 
 #       Contact Tab Tour Plan Flow
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
