@@ -5,8 +5,8 @@ Library    DateTime
 *** Variables ***
 # Contact and appointment details
 ${CONTACT_NAME}     Sarah Thompson
-${APPOINTMENT_DATE}         2025-06-02
-${APPOINTMENT_TIME}         15:00
+${APPOINTMENT_DATE_OPTION}         2025-06-02
+${APPOINTMENT_TIME_OPTION}         15:00
 
 # Survey content
 ${Survey_name}              MedRep Engagement Insights
@@ -50,7 +50,7 @@ Convert Tour Plan and execute Tour
     Sleep    2s
     Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONTACT_NAME}")])[1]     10s
     Sleep    3s
-    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${APPOINTMENT_DATE}, ${APPOINTMENT_TIME}"))
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${APPOINTMENT_DATE_OPTION}, ${APPOINTMENT_TIME_OPTION}"))
     Sleep    10s
 
     # Open Tour Plan and convert to Tour Execution
@@ -81,7 +81,7 @@ Convert Tour Plan and execute Tour
 
 
 #   Swipe to Show Survey Questions
-    Swipe    1280    1295    1280    519    1000
+    Swipe    1280    1295    1280    519    500
     Sleep    2s
 
 
@@ -139,7 +139,7 @@ Convert Tour Plan and execute Tour
     Sleep    5s
 
     #   Swipe to Show Brand Discussion Section
-    Swipe    1280    1295    1280    519    800
+    Swipe    1280    1295    1280    519    500
 
 
     # Fill Brand discussion
@@ -169,10 +169,10 @@ Convert Tour Plan and execute Tour
     Input Text    xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]//following-sibling::android.widget.EditText    ${Brand_Discuss_input_text}
 
     # Swipe to reach the Sample delivery section
-    Swipe    1280    1295    1280    519    1000
-    Swipe    1280    1295    1280    519    1000
-    Swipe    1280    1295    1280    519    1000
-    Swipe    1280    1295    1280    819    1000
+    Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    819    500
 
     # Sample delivery section
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Add New"]
