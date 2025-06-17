@@ -36,7 +36,7 @@ View Presentation
 
     # Double tap to pause the presentation playback
     Double Tap    1280    804
-    Sleep    10s
+    Sleep    5s
 
     # Wait for and click the 'Pause' button to pause presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="PAUSE"]   10s
@@ -54,7 +54,7 @@ View Presentation
 
     # Double tap to bring up the finish option
     Double Tap    1280    804
-    Sleep    10s
+    Sleep    5s
     # Wait for and click the 'Finish' button to end the presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="FINISH"]   10s
     Click Element    xpath=//android.widget.Button[@text="FINISH"]
