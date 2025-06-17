@@ -103,9 +103,11 @@ Execute Tour
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]    10s
 
     # Scroll to bottom and Save
-    Swipe    1280    1295    1280    519    500
-    Swipe    1280    1295    1280    519    500
-    Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    519    800
+    Swipe    1280    1295    1280    519    800
+    Swipe    1280    1295    1280    519    800
+    Swipe    1280    1295    1280    819    800
+
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 
     # Confirm return to Contact Page
