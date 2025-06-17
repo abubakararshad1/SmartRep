@@ -8,7 +8,6 @@ ${DEVICE_NAME}    emulator-5554
 ${APP_PACKAGE}       com.smartrep
 ${APP_ACTIVITY}      com.smartrep.MainActivity
 ${UI_AUTOMATION}     uiautomator2
-${CONTACT_NAME}     Nofal
 
 *** Test Cases ***
 Open Application
