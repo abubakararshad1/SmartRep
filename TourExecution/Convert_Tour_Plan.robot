@@ -30,7 +30,7 @@ ${Brand_Discuss_note}       Beneficial for infections in ear, nose, and throat.
 
 
 *** Test Cases ***
-Convert Tour Plan and execute Tour
+Verify that the user can convert the Tour Plan and execute the tour. 
 
     # Open Activities tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
