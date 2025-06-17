@@ -5,7 +5,7 @@ Library    DateTime
 *** Variables ***
 ${CONTACT_NAME}     Sarah Thompson
 ${HOSPITAL_NAME}    Alpha Hospital
-${APPOINTMENT_DAY}  27
+${APPOINTMENT_DAY}  17
 
 *** Test Cases ***
 Create Tour Plan from Contact

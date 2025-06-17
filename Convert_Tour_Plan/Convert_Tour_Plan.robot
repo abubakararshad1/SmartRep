@@ -5,8 +5,10 @@ Library    DateTime
 *** Variables ***
 # Contact and appointment details
 ${CONTACT_NAME}     Sarah Thompson
-${APPOINTMENT_DATE_OPTION}         2025-06-02
-${APPOINTMENT_TIME_OPTION}         14:30
+#${APPOINTMENT_DATE_OPTION}         2025-06-02
+#${APPOINTMENT_TIME_OPTION}         14:30
+${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
+${APPOINTMENT_TIME_OPTION}      ${APPOINTMENT_TIME}
 
 # Survey content
 ${Survey_name}              MedRep Engagement Insights
