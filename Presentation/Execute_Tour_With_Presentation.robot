@@ -43,11 +43,11 @@ Execute Tour
     Sleep    5s
 
     # Swipe to set hour
-    Swipe    1575    709    1280    0    800
+    Swipe    1575    709    1280    0    500
     Sleep    2s
 
     # Swipe to set minutes
-    Swipe    1575    891    1280    0    800
+    Swipe    1575    891    1280    0    500
     Sleep    2s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Select"]
     Sleep    5s
@@ -65,15 +65,15 @@ Execute Tour
     Sleep    5s
 
     # Swipe left through presentation slides
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
 
     # Swipe right once
-    Swipe    300    804    500    804    800
+    Swipe    300    804    500    804    100
     Sleep    10s
 
     # Double tap to pause presentation
@@ -83,19 +83,19 @@ Execute Tour
     # Pause and Resume presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="PAUSE"]    10s
     Click Element    xpath=//android.widget.Button[@text="PAUSE"]
-    Sleep    10s
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="RESUME"]    10s
     Click Element    xpath=//android.widget.Button[@text="RESUME"]
     Sleep    5s
 
     # Swipe one more slide
-    Swipe    2300    804    2000    804    800
+    Swipe    2300    804    2000    804    100
     Sleep    5s
 
     # Double tap to finish presentation
     Double Tap    1280    804
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="FINISH"]   10s
-    Sleep    10s
+    Sleep    5s
     Click Element    xpath=//android.widget.Button[@text="FINISH"]
     Sleep    10s
 
@@ -103,8 +103,8 @@ Execute Tour
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]    10s
 
     # Scroll to bottom and Save
-    Swipe    1280    1295    1280    519    800
-    Swipe    1280    1295    1280    519    800
+    Swipe    1280    1295    1280    519    500
+    Swipe    1280    1295    1280    519    500
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 
     # Confirm return to Contact Page
