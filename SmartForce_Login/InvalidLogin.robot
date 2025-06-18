@@ -1,18 +1,7 @@
 *** Settings ***
 Library     AppiumLibrary
 
-
-*** Variables ***
-${REMOTE_URL}    http://localhost:4723
-${PLATFORM_NAME}    Android
-#${DEVICE_NAME}    0E54805I241002DE
-${DEVICE_NAME}    emulator-5554
-${APP_PACKAGE}       com.smartrep
-${APP_ACTIVITY}      com.smartrep.MainActivity
-${UI_AUTOMATION}     uiautomator2
-
 *** Test Cases ***
-
 login functionality with an invalid username and password.
 #   Login to Salesforce Flow
 
