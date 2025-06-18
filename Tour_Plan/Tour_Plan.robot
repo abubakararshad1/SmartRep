@@ -5,7 +5,7 @@ Library    DateTime
 *** Variables ***
 ${CONTACT_NAME}     Sarah Thompson
 ${HOSPITAL_NAME}    Alpha Hospital
-${APPOINTMENT_DAY}  17
+#${APPOINTMENT_DAY}      18
 
 *** Test Cases ***
 Create Tour Plan from Contact
@@ -30,6 +30,8 @@ Create Tour Plan from Contact
 
     # Select the date from calendar using appointment day variable
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup    10s
+
+    ${APPOINTMENT_DAY}=    Get Current Date    result_format=%d
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup
     Sleep    5s
 
