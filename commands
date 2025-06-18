@@ -1,3 +1,14 @@
 robot -d Output --loglevel TRACE app.robot presentation.robot
 
 robot -d Output --loglevel TRACE User_Login Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot Tour_Plan Convert_Tour_Plan
+
+robot -d Output --loglevel TRACE SmartForce_Login/User_Login.robot
+
+robot -d Output --loglevel TRACE SmartForce_Login/InvalidLogin.robot SmartForce_Login/ValidLogin.robot SmartForce_Login/Sync.robot
+ Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot Tour_Plan Convert_Tour_Plan
+
+
+
+robot -d Output --loglevel TRACE App SmartForce_Login/User_Login.robot
+
+robot -d Output --loglevel TRACE App Tour_Plan Convert_Tour_Plan Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot
