@@ -13,17 +13,6 @@ ${UI_AUTOMATION}     uiautomator2
 
 *** Test Cases ***
 
-Open Application
-    [Documentation]    Launch SmartRep app, switch to Sandbox, login and open Tour Plan.
-    Open Application    ${REMOTE_URL}
-    ...    platformName=${PLATFORM_NAME}
-    ...    deviceName=${DEVICE_NAME}
-    ...    appPackage=${APP_PACKAGE}
-    ...    appActivity=${APP_ACTIVITY}
-    ...    automationName=${UI_AUTOMATION}
-#    ...    noReset=true
-    ...    autoGrantPermissions=true
-
 login functionality with an invalid username and password.
 #   Login to Salesforce Flow
 
