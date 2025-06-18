@@ -1,0 +1,3 @@
+*** Test Cases ***
+
+   Click Element
