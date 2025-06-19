@@ -5,7 +5,7 @@ Library     AppiumLibrary
 
 
 *** Test Cases ***
-Verify that user can Download All Presentations.  
+Download All Presentations.
        Click Element    xpath=//android.view.ViewGroup[@content-desc="Presentations"]
        Click Element    xpath=//android.view.ViewGroup[@content-desc="Presentations"]
        Wait Until Element Is Visible    xpath=//android.widget.ScrollView       10s

@@ -25,7 +25,7 @@ ${S&T_answer_3}             Positive outcomes
 
 *** Test Cases ***
 
-Verify that user can Present slides during the tour execution.     
+Execute tour from Contact
 
     #verify tour execution from the contacts tab.
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Contacts"]

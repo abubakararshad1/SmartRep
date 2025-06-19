@@ -14,8 +14,7 @@ ${QUESTION_3_ANSWER}        Lack of patient awareness.
 
 *** Test Cases ***
 
-Verify that the user can answer the without call survey question from the contact.  
-
+Answer the without call survey question
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${CONTACT_NAME}"]   10s
