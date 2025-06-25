@@ -87,6 +87,7 @@ View Tour Plan
     # Navigate to Activities tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
