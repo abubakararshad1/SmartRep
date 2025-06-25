@@ -4,7 +4,7 @@ Library     AppiumLibrary
 
 *** Variables ***
 
-${sample_status}      Active
-${Removed_Stock_QTY}        20
-${Stock_reduction_reason}     Past Expiry Date
-${Product_Skus}     Beclometasone nasal spray 20ml
+${SAMPLE_STATUS}            Active
+${REMOVED_STOCK_QTY}        20
+${STOCK_REDUCTION_REASON}   Past Expiry Date
+${PRODUCT_SKUS}             Beclometasone nasal spray 20ml
