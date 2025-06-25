@@ -14,6 +14,16 @@ ${Events_county}        United Arab Emirates
 ${Events_status}        Planned
 ${Events_city}      Fujairah
 ${Type_events}      Business Discussion
+${unity_price}       1000
+${quality_event}        4
+${Event_Cost_section}       Accommodation
+${related_product}      Miconazole
+${duration_event}       40
+${attendee_contact}     Rao Zeeshan Ali
+${Event_objective}      testing124
+${record_type_ID}       External
+
+
 *** Test Cases ***
  # click calender
 create event
@@ -21,19 +31,22 @@ create event
     click element  xpath=//android.view.ViewGroup[@content-desc="Calendar"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView[2]
     Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Calendar"])[1]     10s
     Sleep    5s
-    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[11]/android.view.ViewGroup
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Month"]/following-sibling::android.view.ViewGroup[3]
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Please Select Type of Event"]       10s
-    Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Event"]      10s
+    Sleep    10s
+    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      20s
+    Sleep    10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Event"]
-    Sleep    5s
+    Sleep    10s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Event"]     10s
-    Sleep    5s
+    Sleep    10s
     Wait Until Element Is Visible    xpath=//android.widget.EditText[@resource-id="@undefined/input" and contains(@text,"Name")]    10s
+    Sleep    10s
     Input Text  xpath=//android.widget.EditText[@resource-id="@undefined/input" and contains(@text,"Name")]     ${Event_Name}
     Set Global Variable    ${Event_Name}
 #estimated Budget
+    Sleep    10s
     Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Estimated Budget"]     ${Estimated_Budget}
 #countrydropdown
     Click Element    xpath=(//android.widget.TextView[@text="Default"])[1]
@@ -79,7 +92,7 @@ create event
 #Event objective
     Sleep    3s
     Wait Until Element Is Visible    //android.widget.EditText[@resource-id="@undefined/input" and @text="Event Description"]       10s
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Event Description"]    testing124
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Event Description"]    ${Event_objective}
 #save button
     Sleep    3s
     Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Save"]   10s
@@ -103,13 +116,13 @@ create event
     Click Element    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input"]
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView
     Sleep    3s
-    Click Element    xpath=//android.widget.TextView[@text="External"]
+    Click Element    xpath=//android.widget.TextView[@text="${record_type_ID}"]
     Sleep    3s
 #duration
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Duration"]    30
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Duration"]    ${duration_event}
 #attendeecontact
     Sleep    3s
-    Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input" and @text="Search Contact"]    Rao Zeeshan Ali
+    Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input" and @text="Search Contact"]    ${attendee_contact}
 #savebutton
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 #eventproductadd
@@ -121,7 +134,7 @@ create event
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView
     Sleep    5s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Miconazole"]
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="${related_product}"]
 #relatedprodutsavebtn
     Sleep    3s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
@@ -133,7 +146,7 @@ create event
     Click Element    xpath=//android.widget.TextView[@text="Default"]
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup
     Sleep    3s
-    Click Element    xpath=//android.widget.TextView[@text="Accommodation"]
+    Click Element    xpath=//android.widget.TextView[@text="${Event_Cost_section}"]
 #payment date
     Sleep    2s
     Click Element    xpath=//android.widget.TextView[@text="Payment Date"]//following-sibling::android.view.ViewGroup
@@ -141,10 +154,10 @@ create event
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${Payment_Date}"]/android.view.ViewGroup
 #quality
     Sleep    2s
-    Input Text    xpath=(//android.widget.EditText[@resource-id="@undefined/input"])[1]    4
+    Input Text    xpath=(//android.widget.EditText[@resource-id="@undefined/input"])[1]    ${quality_event}
 #unityprice
     Sleep    2s
-    Input Text    xpath=(//android.widget.EditText[@resource-id="@undefined/input"])[2]    1000
+    Input Text    xpath=(//android.widget.EditText[@resource-id="@undefined/input"])[2]    ${unity_price}
 #event cost save btn
     Sleep    2s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
