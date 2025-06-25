@@ -185,7 +185,7 @@ Convert Tour Plan and execute Tour
     Wait Until Element Is Visible    //android.widget.TextView[@text="${Product}"]          10s
     Click Element    //android.view.ViewGroup[@content-desc="${Product}"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]/android.view.ViewGroup      10s
+    Wait Until Element Is Visible    xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]/android.view.ViewGroup      20s
     Input Text    xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]//following-sibling::android.widget.EditText    ${Brand_Discuss_input_text}
 
     # Swipe to reach the Sample delivery section
@@ -223,6 +223,7 @@ View the Executed Tour
     #    Verify Tour Execution from the Activity Tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
