@@ -1,6 +1,6 @@
 *** Settings ***
 Library     AppiumLibrary
-Resource    varaibles.resource
+Resource    Varaibles.resource
 
 *** Variables ***
 ${sample_order_Date}     17

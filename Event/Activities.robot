@@ -29,6 +29,7 @@ view schedule event Test Case
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Events")]      10s
     Sleep    10s
     Log To Console    //android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]
+    Sleep    10s
     Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]"       20s
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]"
