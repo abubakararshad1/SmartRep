@@ -29,10 +29,11 @@ view schedule event Test Case
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Events")]      10s
     Sleep    10s
     Log To Console    //android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]
-    Sleep    10s
-    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]"       20s
+    Sleep    30s
+#    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name1},${Type_events1},${Event_start_DATE1},${Event_End_DATE1}')]"      20s
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}"))
     Sleep    5s
-    Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name}, ${Type_events}, ${Event_start_DATE}, ${Event_End_DATE}')]"
+#    Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,'${Event_Name1},${Type_events1},${Event_start_DATE1},${Event_End_DATE1}')]"
 #    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,'Healthcare Leadership Roundtable, Business Discussion, 2025-06-16, 2025-06-20')]
 #    Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,'Healthcare Leadership Roundtable, Business Discussion, 2025-06-16, 2025-06-20')]
     Sleep    10s
