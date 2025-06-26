@@ -5,7 +5,6 @@ Library    ExcelSage
 Resource   ../Excel/Excel_Keywords.resource
 *** Variables ***
 ${EXCEL_EVENT_SHEET}     Event
-
 ${DROPDOWN_ACTIVITIES}     Events
 
 
