@@ -2,12 +2,15 @@
 
 Library     AppiumLibrary
 Library    DateTime
-
+Library    ExcelSage
+Resource   ../Excel/Excel_Keywords.resource
 *** Variables ***
+#${EXCEL_PATH}    ../Excel/Smart_Data.xlsx
+${EXCEL_EVENT_SHEET}     Event
 
-${EVENT_START_DATE}     16
-${EVENT_END_DATE}       20
-${PAYMENT_DATE}         17
+${EVENT_START_DATE}     27
+${EVENT_END_DATE}       27
+${PAYMENT_DATE}         27
 ${EVENT_NAME}           Healthcare Leadership Roundtable
 ${ESTIMATED_BUDGET}     50000
 ${EVENTS_COUNTY}        United Arab Emirates
@@ -45,7 +48,7 @@ Create Event
     Wait Until Element Is Visible    xpath=//android.widget.EditText[@resource-id="@undefined/input" and contains(@text,"Name")]    10s
     Sleep    10s
     Input Text  xpath=//android.widget.EditText[@resource-id="@undefined/input" and contains(@text,"Name")]     ${EVENT_NAME}
-    Set Global Variable    ${EVENT_NAME}
+#    Set Global Variable    ${EVENT_NAME}
 #estimated Budget
     Sleep    10s
     Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Estimated Budget"]     ${ESTIMATED_BUDGET}
@@ -68,7 +71,7 @@ Create Event
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup
     Sleep    5s
     Click Element    xpath=//android.widget.TextView[@text="${TYPE_EVENTS}"]
-    Set Global Variable    ${TYPE_EVENTS}
+#    Set Global Variable    ${TYPE_EVENTS}
     Sleep    3s
 #startdate
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/*
@@ -79,7 +82,7 @@ Create Event
      Log To Console  System date format is: ${EVENT_START_DATE}
     ${EVENT_START_DATE}=    Convert Date    ${EVENT_START_DATE}    result_format=%Y-%m-%d    date_format=%d/%m/%Y
     Log To Console    Selected date is: ${EVENT_START_DATE}
-    Set Global Variable    ${EVENT_START_DATE}
+#    Set Global Variable    ${EVENT_START_DATE}
 #end date
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/*
     sleep   5s
@@ -89,7 +92,21 @@ Create Event
      Log To Console  System date format is: ${EVENT_END_DATE}
     ${EVENT_END_DATE}=    Convert Date    ${EVENT_END_DATE}       result_format=%Y-%m-%d    date_format=%d/%m/%Y
     Log To Console    Selected date is: ${EVENT_END_DATE}
-    Set Global Variable    ${EVENT_END_DATE}
+#    Set Global Variable    ${EVENT_END_DATE}
+
+#    Create Workbook     ${EXCEL_PATH}        overwrite_if_exists=True
+    Open Or Create Workbook And Sheet       ${EXCEL_EVENT_SHEET}
+#    Rename Sheet    Sheet   ${EXCEL_EVENT_SHEET}
+    Write To Cell    A1    Event Name       ${EXCEL_EVENT_SHEET}
+    Write To Cell    A2    ${EVENT_NAME}       ${EXCEL_EVENT_SHEET}
+    Write To Cell    B1    Event Type     ${EXCEL_EVENT_SHEET}
+    Write To Cell    B2    ${TYPE_EVENTS}     ${EXCEL_EVENT_SHEET}
+    Write To Cell    C1    Event Start Date       ${EXCEL_EVENT_SHEET}
+    Write To Cell    C2    ${EVENT_START_DATE}       ${EXCEL_EVENT_SHEET}
+    Write To Cell    D1    Event End Date     ${EXCEL_EVENT_SHEET}
+    Write To Cell    D2    ${EVENT_END_DATE}     ${EXCEL_EVENT_SHEET}
+    Save Workbook
+
 #Event objective
     Sleep    3s
     Wait Until Element Is Visible    //android.widget.EditText[@resource-id="@undefined/input" and @text="Event Description"]       10s
@@ -126,6 +143,7 @@ Create Event
     Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input" and @text="Search Contact"]    ${ATTENDEE_CONTACT}
 #savebutton
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
+
 #eventproductadd
     Sleep    5s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="Add"])[2]
@@ -139,6 +157,10 @@ Create Event
 #relatedprodutsavebtn
     Sleep    3s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
+    Sleep    5s
+        # Swipe up to bring it into view
+    Swipe    1280    1071    1575    750    800   # 2 swipes
+    Sleep    2s
 #eventproductaddbtn
     Sleep    2s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="Add"])[3]
