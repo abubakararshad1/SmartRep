@@ -1,7 +1,7 @@
 *** Settings ***
 Library     AppiumLibrary
 Library     DateTime
-Library     Python_File/DoubleTapLibrary.py
+Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
 ${CONTACT_NAME}         Sarah Thompson
