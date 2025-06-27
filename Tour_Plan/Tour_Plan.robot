@@ -43,7 +43,7 @@ Create Tour Plan from Contact
     Log To Console    Selected date is: ${APPOINTMENT_DATE}
     ${APPOINTMENT_DATE}=    Convert Date    ${APPOINTMENT_DATE}    result_format=%Y-%m-%d    date_format=%d/%m/%Y
     Log To Console    Formatted date is: ${APPOINTMENT_DATE}
-    Set Global Variable    ${APPOINTMENT_DATE}
+#    Set Global Variable    ${APPOINTMENT_DATE}
 
     # Select time (hours and minutes) for the tour plan
     Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="00:00"]      10s
@@ -65,7 +65,7 @@ Create Tour Plan from Contact
     # Get and log the selected time
     ${APPOINTMENT_TIME}=    Get Element Attribute    xpath=//android.widget.TextView[@text="Time"]/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup    content-desc
     Log To Console    Selected time is: ${APPOINTMENT_TIME}
-    Set Global Variable    ${APPOINTMENT_TIME}
+#    Set Global Variable    ${APPOINTMENT_TIME}
 
     # Set tour duration to 10 minutes
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup      10s
@@ -126,7 +126,7 @@ View Tour Plan
 
 
     Open Workbook       ${EXCEL_PATH}
-    ${SEARCH_CONTACT_NAME}=    Get Cell Value    A2     ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_CONTACT_NAME}=        Get Cell Value        A2     ${EXCEL_TOUR_PLAN_SHEET}
     ${SEARCH_APPOINTMENT_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_PLAN_SHEET}
     ${SEARCH_APPOINTMENT_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_PLAN_SHEET}
 
