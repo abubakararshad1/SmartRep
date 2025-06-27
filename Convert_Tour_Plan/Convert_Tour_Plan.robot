@@ -1,14 +1,17 @@
 *** Settings ***
 Library    AppiumLibrary
 Library    DateTime
+Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
+${EXCEL_TOUR_PLAN_SHEET}     Tour Plan
+${EXCEL_CONVERT_PLAN_SHEET}     Convert Tour Plan
 # Contact and appointment details
 ${CONTACT_NAME}     Sarah Thompson
 #${APPOINTMENT_DATE_OPTION}         2025-06-02
 #${APPOINTMENT_TIME_OPTION}         14:30
-${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
-${APPOINTMENT_TIME_OPTION}      ${APPOINTMENT_TIME}
+#${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
+#${APPOINTMENT_TIME_OPTION}      ${APPOINTMENT_TIME}
 
 # Survey content
 ${Survey_name}              MedRep Engagement Insights
@@ -50,6 +53,13 @@ Convert Tour Plan and execute Tour
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
+    #reading data from excel
+    Open Workbook       ${EXCEL_PATH}
+    ${SEARCH_CONTACT_NAME}=    Get Cell Value         A2    ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_APPOINTMENT_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_APPOINTMENT_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_PLAN_SHEET}
+
+    Close Workbook
 
     # Try to check if "Tour Plan" is already visible
     ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]    5s
@@ -65,15 +75,15 @@ Convert Tour Plan and execute Tour
     Sleep    3s
 
     # Search for the contact in the Tour Plan tab
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONTACT_NAME}
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${SEARCH_CONTACT_NAME}
     Sleep    2s
 
     # Wait until the contact name appears in the search results
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONTACT_NAME}")])[1]    10s
-    Sleep    3s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${SEARCH_CONTACT_NAME}")])[1]    10s
+    Sleep    5s
 
-    # Scroll to the specific tour plan entry using the contact name, date, and time
-    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${APPOINTMENT_DATE_OPTION}, ${APPOINTMENT_TIME_OPTION}"))
+#     Scroll to the specific tour plan entry using the contact name, date, and time
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_CONTACT_NAME}, ${SEARCH_APPOINTMENT_DATE}, ${SEARCH_APPOINTMENT_TIME}"))
     Sleep    10s
 
     # Open Tour Plan and convert to Tour Execution
@@ -215,6 +225,16 @@ Convert Tour Plan and execute Tour
     # Swipe to reach the Sample delivery Product section
     Swipe    1280    1295    1280    919    500
 
+    Open Or Create Workbook And Sheet       ${EXCEL_CONVERT_PLAN_SHEET}
+#   Rename Sheet    Sheet   ${EXCEL_EVENT_SHEET}
+    Write To Cell    A1    Contact Name       ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    A2    ${CONTACT_NAME}       ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    B1    Appointment Date    ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    C1    Appointment Time        ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    C2    ${TOUR_EXECUTION_TIME}       ${EXCEL_CONVERT_PLAN_SHEET}
+    Save Workbook
+
     # Save tour execution
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact")]     10s
@@ -249,6 +269,12 @@ View the Executed Tour
 
     Sleep    3s
 
+    Open Workbook       ${EXCEL_PATH}
+    ${CONVERT_PLAN_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_CONVERT_PLAN_SHEET}
+    ${CONVERT_PLAN_DATE}=    Get Cell Value    B2     ${EXCEL_CONVERT_PLAN_SHEET}
+    ${CONVERT_PLAN_TIME}=    Get Cell Value    C2     ${EXCEL_CONVERT_PLAN_SHEET}
+    Log To Console    ${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n
+
     # Search and select the contact from the Tour Execution list
 
     # Input the contact name in the search bar
@@ -263,7 +289,7 @@ View the Executed Tour
 
     # Scroll through the list to find the matching tour execution entry based on contact name, date, and time
     # This step ensures we're selecting the exact planned activity for execution verification.
-    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${TOUR_EXECUTION_DATE}, ${TOUR_EXECUTION_TIME}"))
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_CONTACT_NAME}, ${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))
     Sleep    10s
 
     # Wait for the "Tour Execution" label to confirm that the correct entry has been opened
