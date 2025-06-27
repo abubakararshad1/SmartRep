@@ -1,16 +1,14 @@
 *** Settings ***
 Library    AppiumLibrary
 Library    DateTime
-Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
-${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
-${EXCEL_CONVERT_PLAN_SHEET}     Convert Tour Plan
 # Contact and appointment details
+${CONTACT_NAME}     Sarah Thompson
 #${APPOINTMENT_DATE_OPTION}         2025-06-02
 #${APPOINTMENT_TIME_OPTION}         14:30
-#${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
-#${APPOINTMENT_TIME_OPTION}      ${APPOINTMENT_TIME}
+${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
+${APPOINTMENT_TIME_OPTION}      ${APPOINTMENT_TIME}
 
 # Survey content
 ${Survey_name}              MedRep Engagement Insights
@@ -34,12 +32,12 @@ ${S&T_answer_2}             9
 ${S&T_answer_3}             Patients show significant symptom relief and improved recovery with minimal side effects.
 
 # Brand discussion details
-${Use_Case}                     Miconazole Treatment for Otomycosis (Fungal Ear Infection)
-${Classification}               Detailed
-${Product_message}              Rapid treatment for fungal infections in the ear, nose, and throat.
-${Product}                      Miconazole
+${Use_Case}                 Miconazole Treatment for Otomycosis (Fungal Ear Infection)
+${Classification}           Detailed
+${Product_message}          Rapid treatment for fungal infections in the ear, nose, and throat.
+${Product}                  Miconazole
 ${Brand_Discuss_input_text}     Beneficial for infections in ear, nose, and throat.
-${Product_Sku}                  Beclometasone nasal spray 20ml
+${Product_Sku}      Beclometasone nasal spray 20ml
 
 
 *** Test Cases ***
@@ -49,16 +47,9 @@ Convert Tour Plan and execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
-    #reading data from excel
-    Open Workbook       ${EXCEL_PATH}
-    ${SEARCH_CONTACT_NAME}=    Get Cell Value        A2    ${EXCEL_TOUR_PLAN_SHEET}
-    ${SEARCH_APPOINTMENT_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_PLAN_SHEET}
-    ${SEARCH_APPOINTMENT_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_PLAN_SHEET}
-
-    Close Workbook
 
     # Try to check if "Tour Plan" is already visible
     ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]    5s
@@ -74,15 +65,15 @@ Convert Tour Plan and execute Tour
     Sleep    3s
 
     # Search for the contact in the Tour Plan tab
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${SEARCH_CONTACT_NAME}
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONTACT_NAME}
     Sleep    2s
 
     # Wait until the contact name appears in the search results
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${SEARCH_CONTACT_NAME}")])[1]    10s
-    Sleep    5s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONTACT_NAME}")])[1]    10s
+    Sleep    3s
 
-#     Scroll to the specific tour plan entry using the contact name, date, and time
-    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_CONTACT_NAME}, ${SEARCH_APPOINTMENT_DATE}, ${SEARCH_APPOINTMENT_TIME}"))
+    # Scroll to the specific tour plan entry using the contact name, date, and time
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${APPOINTMENT_DATE_OPTION}, ${APPOINTMENT_TIME_OPTION}"))
     Sleep    10s
 
     # Open Tour Plan and convert to Tour Execution
@@ -140,7 +131,7 @@ Convert Tour Plan and execute Tour
 
     # Fill product section
     Log To Console   >>>> Product section is selected
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="${Product_question}"])[1]   10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
     Sleep  5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
@@ -155,7 +146,7 @@ Convert Tour Plan and execute Tour
     Sleep    10s
 
     # Fill S&T section
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="${S&T_question_1}"])[1]        10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${S&T_question_1}"]        10s
     Click Element    xpath =//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
@@ -224,16 +215,6 @@ Convert Tour Plan and execute Tour
     # Swipe to reach the Sample delivery Product section
     Swipe    1280    1295    1280    919    500
 
-    Open Or Create Workbook And Sheet       ${EXCEL_CONVERT_PLAN_SHEET}
-#   Rename Sheet    Sheet   ${EXCEL_EVENT_SHEET}
-    Write To Cell    A1    Convert Plan Contact Name       ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    A2    ${SEARCH_CONTACT_NAME}       ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    B1    Convert Plan Appointment Date    ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    C1    Convert Plan Appointment Time        ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    C2    ${TOUR_EXECUTION_TIME}       ${EXCEL_CONVERT_PLAN_SHEET}
-    Save Workbook
-
     # Save tour execution
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact")]     10s
@@ -246,7 +227,7 @@ View the Executed Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
     # Try to check if "Tour Execution" is already visible
@@ -268,27 +249,21 @@ View the Executed Tour
 
     Sleep    3s
 
-    Open Workbook       ${EXCEL_PATH}
-    ${CONVERT_PLAN_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_CONVERT_PLAN_SHEET}
-    ${CONVERT_PLAN_DATE}=    Get Cell Value    B2     ${EXCEL_CONVERT_PLAN_SHEET}
-    ${CONVERT_PLAN_TIME}=    Get Cell Value    C2     ${EXCEL_CONVERT_PLAN_SHEET}
-    Log To Console    \n${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n
-
     # Search and select the contact from the Tour Execution list
 
     # Input the contact name in the search bar
     # This helps to filter and locate the relevant activity record quickly.
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONVERT_PLAN_CONTACT_NAME}
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONTACT_NAME}
     Sleep    2s
 
     # Wait until the contact name appears in the search results
     # Ensures that the app has loaded the result before attempting any further action.
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONVERT_PLAN_CONTACT_NAME}")])[1]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONTACT_NAME}")])[1]     10s
     Sleep    3s
 
     # Scroll through the list to find the matching tour execution entry based on contact name, date, and time
     # This step ensures we're selecting the exact planned activity for execution verification.
-    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_CONTACT_NAME}, ${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${TOUR_EXECUTION_DATE}, ${TOUR_EXECUTION_TIME}"))
     Sleep    10s
 
     # Wait for the "Tour Execution" label to confirm that the correct entry has been opened

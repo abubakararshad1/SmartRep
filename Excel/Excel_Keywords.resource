@@ -4,16 +4,18 @@ Library    AppiumLibrary
 Library    OperatingSystem
 Library    Collections
 *** Variables ***
-${EXCEL_PATH}          ../Excel/Smart_Data.xlsx
+${EXCEL_PATH}       ../Excel/Smart_Data.xlsx
+
+
 
 *** Keywords ***
 Open Or Create Workbook And Sheet
     [Arguments]     ${sheet_name}
-    ${file_exists}=    Run Keyword And Return Status    File Should Exist    ${excel_path}
+    ${file_exists}=    Run Keyword And Return Status    File Should Exist    ${EXCEL_PATH}
     IF    ${file_exists}
-        Open Workbook    ${excel_path}
+        Open Workbook    ${EXCEL_PATH}
     ELSE
-        Create Workbook    ${excel_path}    overwrite_if_exists=True
+        Create Workbook    ${EXCEL_PATH}    overwrite_if_exists=True
         Rename Sheet       Sheet    ${sheet_name}
     END
 
