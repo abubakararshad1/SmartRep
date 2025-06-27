@@ -47,6 +47,8 @@ Contact DCR
     #scroll to element
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]     10s
+#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${OLD_CONTACT_NAME}, ${DCR_CONTACT_ACTION}").className("com.horcrux.svg.PathView"))
     Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${OLD_CONTACT_NAME}, ${DCR_CONTACT_ACTION}"))
+
     Sleep    10s
 
