@@ -1,3 +1,7 @@
+For Excel:
+pip install robotframework-excelsage
+
+
 robot -d Output --loglevel TRACE app.robot presentation.robot
 
 robot -d Output --loglevel TRACE User_Login Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot Tour_Plan Convert_Tour_Plan
