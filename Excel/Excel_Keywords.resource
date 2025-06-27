@@ -19,20 +19,20 @@ ${EXCEL_PATH}       ../Excel/Smart_Data.xlsx
 #    END
 
 Open Or Create Workbook And Sheet
-    [Arguments]     ${sheet_name}
-    ${file_exists}=    Run Keyword And Return Status    File Should Exist    ${excel_path}
-    IF    ${file_exists}
-        Open Workbook    ${excel_path}
+    [Arguments]     ${SHEET_NAME}
+    ${FILE_EXISTS}=    Run Keyword And Return Status    File Should Exist    ${EXCEL_PATH}
+    IF    ${FILE_EXISTS}
+        Open Workbook    ${EXCEL_PATH}
     ELSE
-        Create Workbook    ${excel_path}    overwrite_if_exists=True
-        Rename Sheet       Sheet    ${sheet_name}
+        Create Workbook    ${EXCEL_PATH}    overwrite_if_exists=True
+        Rename Sheet       Sheet    ${SHEET_NAME}
     END
 
-    ${sheets}=    Get Sheets
-    ${sheet_exists}=    Run Keyword And Return Status    List Should Contain Value    ${sheets}    ${sheet_name}
+    ${SHEET}=    Get Sheets
+    ${SHEET_EXISTS}=    Run Keyword And Return Status    List Should Contain Value    ${SHEET}    ${SHEET_NAME}
 
-    IF    not ${sheet_exists}
-        Add Sheet    ${sheet_name}
+    IF    not ${SHEET_EXISTS}
+        Add Sheet    ${SHEET_NAME}
     END
 
 
