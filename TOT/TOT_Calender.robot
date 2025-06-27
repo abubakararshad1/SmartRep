@@ -53,8 +53,8 @@ Create TOT
         Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Calendar"])[1]     10s
         Sleep    5s
 #17 Verify that the user can view the Schedule Time Off in the Activity tab.
-        Click Element   xpath= //android.widget.TextView[@text="Activities"]
-        Click Element   xpath= //android.widget.TextView[@text="Activities"]
+        Click Element   xpath=//android.widget.TextView[@text="Activities"]
+        Click Element   xpath=//android.widget.TextView[@text="Activities"]
         Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Activities"])[1]     10s
         Sleep    5s
         Click Element    xpath=//android.widget.TextView[@text="${ACTIVITY_TYPE}"]
