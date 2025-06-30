@@ -2,10 +2,13 @@
 Library     AppiumLibrary
 Library     DateTime
 Library     ../Touch_Keyword/Touch_Keyword.py
+Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
-${CONTACT_NAME}         Sarah Thompson
-${PRESENTATION_NAME}    Presentation Sample 1
+${CONTACT_NAME}                 Sarah Thompson
+${PRESENTATION_NAME}            Presentation Sample 1
+${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
+${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution With Presentation
 
 *** Test Cases ***
 Execute Tour
@@ -20,8 +23,16 @@ Execute Tour
     # Wait for contact search bar to load
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
 
+    #reading data from excel
+    Open Workbook       ${EXCEL_PATH}
+    ${SEARCH_CONTACT_NAME}=        Get Cell Value    A2    ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_APPOINTMENT_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_APPOINTMENT_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_PLAN_SHEET}
+
+    Close Workbook
+
     # Search and select contact
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONTACT_NAME}
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${SEARCH_CONTACT_NAME}
     Sleep    10s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView
     Sleep    10s
@@ -100,19 +111,34 @@ Execute Tour
     Sleep    10s
 
     # Verify returned to "Tour Execution" screen
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]    10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]    15s
 
+    Open Or Create Workbook And Sheet       ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    A1    Tour Execution Contact Name              ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    A2    ${CONTACT_NAME}           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    B1    Tour Execution Appointment Date          ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    C1    Tour Execution Appointment Time           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    C2    ${TOUR_EXECUTION_TIME}     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Save Workbook
     # Scroll to bottom and Save
     Swipe    1280    1295    1280    519    800
     Swipe    1280    1295    1280    519    800
     Swipe    1280    1295    1280    519    800
     Swipe    1280    1295    1280    819    800
 
+
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 
     # Confirm return to Contact Page
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact")]    10s
     Sleep    5s
+
+    Open Workbook       ${EXCEL_PATH}
+    ${TOUR_EXE_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    ${TOUR_EXE_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    ${TOUR_EXE_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Log To Console    \n${TOUR_EXE_CONTACT_NAME}\n${TOUR_EXE_DATE}\n${TOUR_EXE_TIME}\n
 #
 #    # Navigate to Activity tab
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]

@@ -95,3 +95,4 @@ class Touch_Keyword:
             "percent": float(percent)
             }
         driver.execute_script("mobile: swipeGesture", args)
+
