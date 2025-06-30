@@ -7,7 +7,7 @@ Resource   ../Excel/Excel_Keywords.resource
 *** Variables ***
 ${PRESENTATION_NAME}            Presentation Sample 1
 ${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
-${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution With Presentation
+${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution
 
 *** Test Cases ***
 Execute Tour
