@@ -4,10 +4,10 @@ Library    DateTime
 Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
-${EXCEL_TOUR_PLAN_SHEET}     Tour Plan
+${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
 ${EXCEL_CONVERT_PLAN_SHEET}     Convert Tour Plan
 # Contact and appointment details
-${CONTACT_NAME}     Sarah Thompson
+${CONTACT_NAME}                 Sarah Thompson
 #${APPOINTMENT_DATE_OPTION}         2025-06-02
 #${APPOINTMENT_TIME_OPTION}         14:30
 #${APPOINTMENT_DATE_OPTION}      ${APPOINTMENT_DATE}
@@ -35,12 +35,12 @@ ${S&T_answer_2}             9
 ${S&T_answer_3}             Patients show significant symptom relief and improved recovery with minimal side effects.
 
 # Brand discussion details
-${Use_Case}                 Miconazole Treatment for Otomycosis (Fungal Ear Infection)
-${Classification}           Detailed
-${Product_message}          Rapid treatment for fungal infections in the ear, nose, and throat.
-${Product}                  Miconazole
+${Use_Case}                     Miconazole Treatment for Otomycosis (Fungal Ear Infection)
+${Classification}               Detailed
+${Product_message}              Rapid treatment for fungal infections in the ear, nose, and throat.
+${Product}                      Miconazole
 ${Brand_Discuss_input_text}     Beneficial for infections in ear, nose, and throat.
-${Product_Sku}      Beclometasone nasal spray 20ml
+${Product_Sku}                  Beclometasone nasal spray 20ml
 
 
 *** Test Cases ***
@@ -55,7 +55,7 @@ Convert Tour Plan and execute Tour
 
     #reading data from excel
     Open Workbook       ${EXCEL_PATH}
-    ${SEARCH_CONTACT_NAME}=    Get Cell Value         A2    ${EXCEL_TOUR_PLAN_SHEET}
+    ${SEARCH_CONTACT_NAME}=    Get Cell Value        A2    ${EXCEL_TOUR_PLAN_SHEET}
     ${SEARCH_APPOINTMENT_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_PLAN_SHEET}
     ${SEARCH_APPOINTMENT_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_PLAN_SHEET}
 
@@ -227,11 +227,11 @@ Convert Tour Plan and execute Tour
 
     Open Or Create Workbook And Sheet       ${EXCEL_CONVERT_PLAN_SHEET}
 #   Rename Sheet    Sheet   ${EXCEL_EVENT_SHEET}
-    Write To Cell    A1    Contact Name       ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    A1    Convert Plan Contact Name       ${EXCEL_CONVERT_PLAN_SHEET}
     Write To Cell    A2    ${CONTACT_NAME}       ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    B1    Appointment Date    ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    B1    Convert Plan Appointment Date    ${EXCEL_CONVERT_PLAN_SHEET}
     Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_CONVERT_PLAN_SHEET}
-    Write To Cell    C1    Appointment Time        ${EXCEL_CONVERT_PLAN_SHEET}
+    Write To Cell    C1    Convert Plan Appointment Time        ${EXCEL_CONVERT_PLAN_SHEET}
     Write To Cell    C2    ${TOUR_EXECUTION_TIME}       ${EXCEL_CONVERT_PLAN_SHEET}
     Save Workbook
 
@@ -273,7 +273,7 @@ View the Executed Tour
     ${CONVERT_PLAN_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_CONVERT_PLAN_SHEET}
     ${CONVERT_PLAN_DATE}=    Get Cell Value    B2     ${EXCEL_CONVERT_PLAN_SHEET}
     ${CONVERT_PLAN_TIME}=    Get Cell Value    C2     ${EXCEL_CONVERT_PLAN_SHEET}
-    Log To Console    ${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n
+    Log To Console    \n${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n
 
     # Search and select the contact from the Tour Execution list
 
