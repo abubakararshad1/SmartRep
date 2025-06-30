@@ -5,7 +5,6 @@ Library     ../Touch_Keyword/Touch_Keyword.py
 Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
-${CONTACT_NAME}                 Sarah Thompson
 ${PRESENTATION_NAME}            Presentation Sample 1
 ${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
 ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution With Presentation
@@ -115,7 +114,7 @@ Execute Tour
 
     Open Or Create Workbook And Sheet       ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    A1    Tour Execution Contact Name              ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
-    Write To Cell    A2    ${CONTACT_NAME}           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    A2    ${SEARCH_CONTACT_NAME}           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    B1    Tour Execution Appointment Date          ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    C1    Tour Execution Appointment Time           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
@@ -153,9 +152,9 @@ Execute Tour
 #    Sleep    3s
 #
 #    # Search by contact and verify tour execution data
-#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONTACT_NAME}
+#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${TOUR_EXE_CONTACT_NAME}
 #    Sleep    2s
-#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONTACT_NAME}")])[1]    10s
+#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${TOUR_EXE_CONTACT_NAME}")])[1]    10s
 #    Sleep    3s
-#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONTACT_NAME}, ${TOUR_EXECUTION_DATE}, ${TOUR_EXECUTION_TIME}"))
+#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${TOUR_EXE_CONTACT_NAME}, ${TOUR_EXE_DATE}, ${TOUR_EXE_TIME}"))
 #    Sleep    10s
