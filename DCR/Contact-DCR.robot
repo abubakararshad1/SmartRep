@@ -18,7 +18,10 @@ Contact DCR
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Sleep    3s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Contact")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Contact")])[1]     10s
+    Sleep    3s
+    Clear Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]
+    Sleep    5s
     #select contact from list
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${OLD_CONTACT_NAME}"]       10s
     Click Element    xpath=//android.widget.TextView[@text="${OLD_CONTACT_NAME}"]

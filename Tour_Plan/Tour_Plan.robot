@@ -29,12 +29,16 @@ Create Tour Plan from Contact
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${HOSPITAL_NAME}, Active"]/android.view.ViewGroup[5]/android.view.ViewGroup
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Plan"]     10s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup
-    Sleep    20s
+    Sleep    5s
 
     # Select the date from calendar using appointment day variable
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup    15s
-
+    
     ${APPOINTMENT_DAY}=    Get Current Date    result_format=%d
+    Log To Console    Appointment day is: ${APPOINTMENT_DAY}
+    ${APPOINTMENT_DAY}=    Evaluate    int("${APPOINTMENT_DAY}")
+    Log To Console    Appointment day integer is: ${APPOINTMENT_DAY}
+    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup     10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup
     Sleep    5s
 
