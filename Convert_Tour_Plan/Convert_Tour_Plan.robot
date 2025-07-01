@@ -49,7 +49,7 @@ Convert Tour Plan and execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
     Sleep    3s
 
     #reading data from excel
@@ -140,7 +140,7 @@ Convert Tour Plan and execute Tour
 
     # Fill product section
     Log To Console   >>>> Product section is selected
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="${Product_question}"])[1]   10s
     Sleep  5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
@@ -155,7 +155,7 @@ Convert Tour Plan and execute Tour
     Sleep    10s
 
     # Fill S&T section
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${S&T_question_1}"]        10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="${S&T_question_1}"])[1]        10s
     Click Element    xpath =//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
@@ -246,7 +246,7 @@ View the Executed Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
     Sleep    3s
 
     # Try to check if "Tour Execution" is already visible

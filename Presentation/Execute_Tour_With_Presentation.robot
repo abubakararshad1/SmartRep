@@ -17,7 +17,7 @@ Execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Contact")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Contact")])[1]     10s
 
     # Wait for contact search bar to load
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
@@ -142,7 +142,7 @@ Execute Tour
 #    # Navigate to Activity tab
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]    10s
+#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]    10s
 #
 #    # Filter by Tour Plan then switch to Tour Execution
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Tour Plan"]

@@ -13,7 +13,7 @@ Create Tour Plan from Contact
     # Navigate to the "Contacts" tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Contact")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Contact")])[1]     10s
 
     # Search and select the contact
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
@@ -88,7 +88,7 @@ View Tour Plan
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
     Sleep    3s
 
     # Try to check if "Tour Plan" is already visible
