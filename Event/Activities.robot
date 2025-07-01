@@ -42,3 +42,4 @@ View schedule event Test Case
     Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_EVENT_NAME}, ${SEARCH_EVENT_TYPE}, ${SEARCH_START_DATE}, ${SEARCH_END_DATE}"))
     Sleep    10s
 
+
