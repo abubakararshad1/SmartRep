@@ -15,4 +15,5 @@ robot -d Output --loglevel TRACE SmartForce_Login/InvalidLogin.robot SmartForce_
 
 robot -d Output --loglevel TRACE App SmartForce_Login
 
-robot -d Output --loglevel TRACE App Tour_Plan Convert_Tour_Plan Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot Survey
+robot -d Output --loglevel TRACE App Tour_Plan Convert_Tour_Plan DCR/Contact-DCR.robot Survey Presentation/Download_Presentation.robot Presentation/View_Presentation.robot Presentation/Execute_Tour_With_Presentation.robot
+DCR/Account-DCR.robot TOT Event/ SampleStocks/Removesamplestock.robot SampleStocks/Ordersamplestock.robot Coaching Expenses
