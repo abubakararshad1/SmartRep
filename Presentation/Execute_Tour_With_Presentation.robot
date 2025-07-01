@@ -1,7 +1,7 @@
 *** Settings ***
 Library     AppiumLibrary
 Library     DateTime
-Library     ../Touch_Keyword/Touch_Keyword.py
+Library    ../Touch_Keyword/Touch_Keyword.py
 Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
