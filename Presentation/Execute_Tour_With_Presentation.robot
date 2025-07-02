@@ -165,7 +165,7 @@ View the Executed Tour With Presentation edetailing
     # Input the contact name in the search bar
     # This helps to filter and locate the relevant activity record quickly.
     Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${SEARCH_TOUR_EXE_CONTACT_NAME}
-    Sleep    2s
+    Sleep    5s
     Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${SEARCH_TOUR_EXE_CONTACT_NAME}")])[1]    10s
     Sleep    3s
     Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_TOUR_EXE_CONTACT_NAME}, ${SEARCH_TOUR_EXE_DATE}, ${SEARCH_TOUR_EXE_TIME}"))
