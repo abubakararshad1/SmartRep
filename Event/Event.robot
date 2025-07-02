@@ -73,6 +73,8 @@ Create Event
     Click Element    xpath=//android.widget.TextView[@text="${TYPE_EVENTS}"]
 #    Set Global Variable    ${TYPE_EVENTS}
     Sleep    3s
+
+    Swipe    1280    1295    1280    1000    500
 #startdate
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/*
     sleep   5s

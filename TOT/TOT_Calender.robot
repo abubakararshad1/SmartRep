@@ -65,7 +65,6 @@ Create TOT
         Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
         Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
         Click Element    xpath=//android.widget.TextView[@text="${EVENT_TYPE1}"]
-        Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="${EVENT_TYPE1}"]    10s
         END
 
 
@@ -76,11 +75,10 @@ Create TOT
 #        Click Text      ${EVENT_TYPE1}
 #        Sleep    5s
         Wait Until Element Is Visible    xpath=//android.widget.EditText[@resource-id="@undefined/input"]           10s
-        Click Element       xpath=//android.widget.EditText[@resource-id="@undefined/input"]
+#        Click Element       xpath=//android.widget.EditText[@resource-id="@undefined/input"]
         Sleep    5s
         Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${END_DATE}
         Sleep    5s
-        Click Element    xpath=(//android.widget.TextView[@text="${END_DATE}"])[1]
         Click Element    xpath=(//android.widget.TextView[@text="${END_DATE}"])[1]
         Sleep    10s
 

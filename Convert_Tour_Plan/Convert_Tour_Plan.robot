@@ -215,6 +215,8 @@ Convert Tour Plan and execute Tour
     Sleep    5s
 
     Wait Until Element Is Visible    xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]    10s
+    Clear Text    xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]
+    Sleep    3s
     Input Text    xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]    10
     Sleep    5s
 

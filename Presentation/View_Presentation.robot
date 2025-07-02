@@ -28,7 +28,7 @@ View Presentation
     Swipe    2300    804    2000    804    100
     Sleep    5s
     Swipe    2300    804    2000    804    100
-    Sleep    5s
+    Sleep    10s
 
     # Swipe right to go back to a previous slide
     Swipe    300    804    500    804    100
@@ -36,7 +36,7 @@ View Presentation
 
     # Double tap to pause the presentation playback
     Double Tap    1280    804
-    Sleep    5s
+    Sleep    10s
 
     # Wait for and click the 'Pause' button to pause presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="PAUSE"]   10s

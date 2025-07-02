@@ -94,7 +94,7 @@ Execute Tour
     # Pause and Resume presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="PAUSE"]    10s
     Click Element    xpath=//android.widget.Button[@text="PAUSE"]
-    Sleep    5s
+    Sleep    10s
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="RESUME"]    10s
     Click Element    xpath=//android.widget.Button[@text="RESUME"]
     Sleep    5s
