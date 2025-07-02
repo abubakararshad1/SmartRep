@@ -10,10 +10,11 @@ ${PLANNED_SAMPLES}       Detailing
 
 *** Test Cases ***
 
-Order smaple stock
+Order sample stock
 #click sample stock
-    click element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
-    click element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
+    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup         10s
+    Click Element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
+    Click Element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
 #click on the beclomatason 20ml
     Sleep    3s
     Log To Console      ${PRODUCT_SKUS}
@@ -22,6 +23,7 @@ Order smaple stock
     Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"SampleStock")]     10s
 #swipe
 #    Swipe    1575    891    1280    0    800   # 2 swipes
@@ -58,3 +60,4 @@ Order smaple stock
 #click save btn
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
+    Sleep    5s

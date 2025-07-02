@@ -17,4 +17,5 @@ Verify that user can View the details of the Coaching.
 #click on the coaching template
     Sleep    3s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]
+    Sleep    10s
     

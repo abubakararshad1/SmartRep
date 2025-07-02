@@ -25,7 +25,9 @@ ${RELATED_ACCOUNT}          AE-Sample Brick-04
 *** Test Cases ***
 Verify that user can Add new expense in the Expense module
 #click on the expense tab
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Expense"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView[1]
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Expense"]/android.view.ViewGroup
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Expense"]/android.view.ViewGroup
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Expense Reports")])[1]       10s
 #Click on the Add button.
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Add"]
@@ -118,6 +120,7 @@ Verify that user can Add new expense in the Expense module
     Wait Until Element Is Visible    xpath=(//android.view.ViewGroup[@resource-id="@@autocomplete/input-anchor/container"])[2]/android.view.ViewGroup       10s
     Sleep    5s
     Click Element    xpath=(//android.view.ViewGroup[@resource-id="@@autocomplete/input-anchor/container"])[2]/android.view.ViewGroup
+    Sleep    5s
     Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input/input"]    ${RELATED_ACCOUNT}
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup       10s
     Click Element    xpath=(//android.widget.TextView[@text="${RELATED_ACCOUNT}"])[1]
