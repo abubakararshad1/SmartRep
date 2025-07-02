@@ -45,6 +45,7 @@ Order sample stock
 #Sample Order Date
     Sleep    10s
     Click Element    xpath=//android.widget.TextView[@text="Samples Order Date"]/following-sibling::android.view.ViewGroup/android.widget.TextView
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup     10s
     Sleep    10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${SAMPLE_ORDER_DATE}"]

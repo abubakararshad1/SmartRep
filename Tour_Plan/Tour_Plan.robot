@@ -94,6 +94,7 @@ Create Tour Plan from Contact
     Save Workbook
 
     # Verify contact screen is reloaded after saving tour
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact : ${CONTACT_NAME}")]     10s
     Sleep    5s
 
