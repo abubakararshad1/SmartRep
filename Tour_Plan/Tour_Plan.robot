@@ -55,12 +55,12 @@ Create Tour Plan from Contact
     Sleep    5s
 
     # Swipe on hour wheel to set desired hour
-    Swipe    1428    709    1280    0    800
-    Sleep    2s
+    Swipe    1428    709    1280    0    200
+    Sleep    5s
 
     # Swipe on minute wheel to set desired minute
-    Swipe    1575    891    1280    0    800
-    Sleep    2s
+    Swipe    1575    891    1280    0    200
+    Sleep    5s
 
     # Confirm time selection
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Select"]
