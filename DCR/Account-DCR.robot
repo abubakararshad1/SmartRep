@@ -3,7 +3,7 @@ Library     AppiumLibrary
 
 *** Variables ***
 #Account Info
-${OLD_ACCOUNT_NAME}      Alpha Hospital
+${OLD_ACCOUNT_NAME}      Victoria Hospital
 ${NEW_ACCOUNT_NAME}    Ravindra Hospital
 ${DCR_ACCOUNT_PRIORITY}    B
 ${DCR_ACCOUNT_ACTION}       Update Account

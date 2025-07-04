@@ -5,8 +5,8 @@ Resource   ../Excel/Excel_Keywords.resource
 
 
 *** Variables ***
-${CONTACT_NAME}     Sarah Thompson
-${HOSPITAL_NAME}    Alpha Hospital
+${CONTACT_NAME}     Eddie Davila
+${HOSPITAL_NAME}    Victoria Hospital
 ${EXCEL_TOUR_PLAN_SHEET}     Tour Plan
 #${APPOINTMENT_DAY}      18
 

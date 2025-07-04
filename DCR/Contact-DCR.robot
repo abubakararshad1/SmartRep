@@ -3,7 +3,7 @@ Library     AppiumLibrary
 
 *** Variables ***
 #Contact Info
-${OLD_CONTACT_NAME}      Emily Rivera
+${OLD_CONTACT_NAME}      Eddie Davila
 ${NEW_CONTACT_FIRSTNAME}    Ahmad
 ${CONTACT_HOME_PHONE}    12345
 ${DCR_CONTACT_ACTION}       Update Contact

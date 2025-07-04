@@ -11,7 +11,7 @@ ${EXPENSE_DATE}             10
 ${EXPENSE_COUNTRY}          United Arab Emirates
 ${EXPENSE_BEHALF}           QA Team
 ${EXPENSE_STATUS}           Draft
-${RELATED_CONTACT}          Jason Patel
+${RELATED_CONTACT}          Eddie Davila
 ${EXPENSE_TYPE}             Accommodation
 ${EXPENSE_AMOUNT}           $750
 ${BUYING_CURRENCY}          USD
@@ -123,7 +123,7 @@ Verify that user can Add new expense in the Expense module
     Sleep    5s
     Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input/input"]    ${RELATED_ACCOUNT}
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup       10s
-    Click Element    xpath=(//android.widget.TextView[@text="${RELATED_ACCOUNT}"])[1]
+    Click Element    xpath=(//android.widget.TextView[@text="${RELATED_ACCOUNT}"])[3]
 #Related Contact: Dr. Eddie Davila
     Sleep    5s
     Click Element    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input" and @text="Search Contact"]

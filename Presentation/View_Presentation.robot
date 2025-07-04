@@ -3,7 +3,6 @@ Library     AppiumLibrary
 Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
-${CONTACT_NAME}         Sarah Thompson
 ${PRESENTATION_NAME}    Presentation Sample 1
 
 *** Test Cases ***
