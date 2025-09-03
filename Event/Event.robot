@@ -8,9 +8,9 @@ Resource   ../Excel/Excel_Keywords.resource
 #${EXCEL_PATH}    ../Excel/Smart_Data.xlsx
 ${EXCEL_EVENT_SHEET}     Event
 
-${EVENT_START_DATE}     28
-${EVENT_END_DATE}       28
-${PAYMENT_DATE}         28
+${EVENT_START_DATE}     23
+${EVENT_END_DATE}       25
+${PAYMENT_DATE}         23
 ${EVENT_NAME}           Healthcare Leadership Roundtable
 ${ESTIMATED_BUDGET}     50000
 ${EVENTS_COUNTY}        United Arab Emirates
@@ -74,7 +74,7 @@ Create Event
 #    Set Global Variable    ${TYPE_EVENTS}
     Sleep    3s
 
-    Swipe    1280    1295    1280    1000    500
+    Swipe    1280    1295    1280    900    500
 #startdate
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/*
     sleep   5s

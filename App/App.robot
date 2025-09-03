@@ -24,5 +24,5 @@ Open Application
     ...    automationName=${UI_AUTOMATION}
     #    First time comment "noReset" Line so we can start app from scratch
     #    2nd time mark "noReset" Line as uncomment ( As we are proceeding without resetting the app)
-#    ...    noReset=true             # (Optional) Prevents app data reset/close when starting sessions
+    ...    noReset=true             # (Optional) Prevents app data reset/close when starting sessions
     ...    autoGrantPermissions=true
