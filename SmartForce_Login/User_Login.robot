@@ -5,7 +5,7 @@ Library     AppiumLibrary
 Login functionality with an invalid username and password.
 #   Login to Salesforce Flow
 
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="https://login.salesforce.com"]     20s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="https://login.salesforce.com"]     30s
     Click Element    xpath=//android.widget.ImageView[@content-desc="More options"]
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]    10s
     Click Element    xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]
@@ -26,6 +26,7 @@ Login functionality with an invalid username and password.
 
 Login functionality with an valid username and password.
 #   Login to Salesforce Flow
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="Log In to Sandbox"]     20s
     Sleep    5s
     Input Text    xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText    qa.smartcrm@bssuniversal.com

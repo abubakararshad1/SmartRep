@@ -79,7 +79,7 @@ Create Event
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/*
     sleep   5s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="${EVENT_START_DATE}"])[1]
-    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/*[1]
+    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/*[1]           10s
     ${EVENT_START_DATE}=    Get Element Attribute    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]      content-desc
      Log To Console  System date format is: ${EVENT_START_DATE}
     ${EVENT_START_DATE}=    Convert Date    ${EVENT_START_DATE}    result_format=%Y-%m-%d    date_format=%d/%m/%Y
