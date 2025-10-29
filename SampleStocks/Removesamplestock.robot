@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library     AppiumLibrary
 Resource    varaibles.resource
 *** Test Cases ***
@@ -15,7 +16,7 @@ Remove smaple stock
     Sleep    2s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="Add New"])[1]
 
-#Number of samples removed from the stock: 20 
+#Number of samples removed from the stock: 20
     Sleep    2s
     Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]    ${REMOVED_STOCK_QTY}
 #Stock reduction reason: Past Expiry Date
@@ -24,6 +25,7 @@ Remove smaple stock
     Click Element    xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView      10s
     Click Text    Past Expiry Date
+
 #click save btn
     Sleep    2s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
