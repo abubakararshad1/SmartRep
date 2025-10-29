@@ -9,7 +9,7 @@ Resource   ../Excel/Excel_Keywords.resource
 ${EXCEL_EVENT_SHEET}     Event
 
 ${EVENT_START_DATE}     23
-${EVENT_END_DATE}       25
+${EVENT_END_DATE}       24
 ${PAYMENT_DATE}         23
 ${EVENT_NAME}           Healthcare Leadership Roundtable
 ${ESTIMATED_BUDGET}     50000
@@ -89,7 +89,8 @@ Create Event
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/*
     sleep   5s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="${EVENT_END_DATE}"])[1]
-    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/*[1]
+    Sleep    5s
+    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/*[1]      10s
     ${EVENT_END_DATE}=    Get Element Attribute    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/*     content-desc
      Log To Console  System date format is: ${EVENT_END_DATE}
     ${EVENT_END_DATE}=    Convert Date    ${EVENT_END_DATE}       result_format=%Y-%m-%d    date_format=%d/%m/%Y

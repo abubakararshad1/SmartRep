@@ -1,5 +1,6 @@
 *** Settings ***
 Library     AppiumLibrary
+Library     Dialogs
 
 *** Test Cases ***
 Login functionality with an invalid username and password.
@@ -32,8 +33,8 @@ Login functionality with an valid username and password.
     Input Text    xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText    qa.smartcrm@bssuniversal.com
     Input Password    xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText    Bss@2025
     Click Element    xpath=//android.widget.Button[@text="Log In to Sandbox"]
+    Pause Execution     🟡 Salesforce sent a verification code to Outlook. Please \nenter it manually and click "Verify" in the browser. Then \npress OK to continue.
     Sleep    10s
-
 
 Verify that the user can Synced data.
 #     click sync button

@@ -2,6 +2,7 @@
 Library    AppiumLibrary
 Library    DateTime
 Resource   ../Excel/Excel_Keywords.resource
+Library    ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
 ${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
@@ -119,34 +120,34 @@ Convert Tour Plan and execute Tour
 
 
     # Fill general survey questions
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Survey_name}"]      10s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView
-    Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_1}"]        10s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_2}"]     10s
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]    ${Answer_2}
-    Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_3}"]     10s
-    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]    ${Answer_3}
-    Sleep    5s
-
-    # Wait and Click on Product Survey Tab
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Product"]    10s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
-    Sleep    10s
-
-    # Fill product section
-    Log To Console   >>>> Product section is selected
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
-    Sleep  5s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]
-    Sleep    5s
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Survey_name}"]      10s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+#    Sleep    5s
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_1}"]        10s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
+#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_2}"]     10s
+#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]    ${Answer_2}
+#    Sleep    5s
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_3}"]     10s
+#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]    ${Answer_3}
+#    Sleep    5s
+#
+#    # Wait and Click on Product Survey Tab
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Product"]    10s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
+#    Sleep    10s
+#
+#    # Fill product section
+#    Log To Console   >>>> Product section is selected
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
+#    Sleep  5s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]
+#    Sleep    5s
 
 
     # Wait and Click on S&T Survey Tab
@@ -154,6 +155,12 @@ Convert Tour Plan and execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="S And T"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="S And T"]
     Sleep    10s
+
+
+#   Need to comment below 2 lines after general and product survey is displayed.
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+    Sleep    5s
+
 
     # Fill S&T section
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${S&T_question_1}"]        10s
@@ -264,8 +271,10 @@ View the Executed Tour
 
     IF    not ${is_visible}
     Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
-    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
+    Sleep    2s
+#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2 ]/android.view.ViewGroup    10s
+#    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
+    Tap At Coordinates  105   400
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
     END
 

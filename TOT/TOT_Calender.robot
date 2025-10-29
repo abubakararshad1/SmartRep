@@ -31,7 +31,7 @@ Create TOT
         Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup     20s
         Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${STRT_DATE}"]    20s
         Click Element   xpath=//android.widget.TextView[@text="${STRT_DATE}"]
-        Sleep    3s
+        Sleep    5s
         ${END_DATE}=    Get Element Attribute    xpath=//android.widget.TextView[@text="End Date"]//following-sibling::android.view.ViewGroup//android.view.ViewGroup    content-desc
         Log To Console  System date format is: ${END_DATE}
         ${END_DATE}=    Convert Date    ${END_DATE}       result_format=%Y-%m-%d    date_format=%d/%m/%Y
