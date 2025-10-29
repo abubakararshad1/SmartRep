@@ -58,3 +58,4 @@ Order smaple stock
 #click save btn
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
+    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup     10s
