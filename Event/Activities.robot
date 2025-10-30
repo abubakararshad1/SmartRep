@@ -1,45 +1,46 @@
 *** Settings ***
-
 Library    AppiumLibrary
-Library    ExcelSage
 Resource   ../Excel/Excel_Keywords.resource
+Library   ../Touch_Keyword/Touch_Keyword.py
+
 *** Variables ***
-${EXCEL_EVENT_SHEET}     Event
-${DROPDOWN_ACTIVITIES}     Events
-
-
+${EXCEL_EVENT_SHEET}      Event
+${DROPDOWN_ACTIVITIES}    Events
+${TAP_X}                  70
+${TAP_Y}                  475
+${TIMEOUT}                10s
 
 *** Test Cases ***
- # click activites
 View schedule event Test Case
+    [Documentation]    View schedule event based on Excel data.
     Sleep    2s
+
+    # Step 1: Open Activities
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
-
-    # Just to load page and find the locator on the page
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
-
-    #click ctivities    drp
-    Sleep    2s
-    ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="${DROPDOWN_ACTIVITIES}"]    5s
+    Sleep    5s
+    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]    ${TIMEOUT}
+    Sleep   3s
+    ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="${DROPDOWN_ACTIVITIES}"]    10s
     IF    not ${is_visible}
     Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
-    Click Element    xpath=//android.widget.TextView[@text="${DROPDOWN_ACTIVITIES}"]
+    Sleep    2s
+    Tap At Coordinates      ${TAP_X}    ${TAP_Y}
+    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="${DROPDOWN_ACTIVITIES}"]    10s
     END
+    # Step 2: Read event data from Excel
+    Open Workbook    ${EXCEL_PATH}
+    ${SEARCH_EVENT_NAME}=    Get Cell Value    A2    ${EXCEL_EVENT_SHEET}
+    ${SEARCH_EVENT_TYPE}=    Get Cell Value    B2    ${EXCEL_EVENT_SHEET}
+    ${SEARCH_START_DATE}=    Get Cell Value    C2    ${EXCEL_EVENT_SHEET}
+    ${SEARCH_END_DATE}=      Get Cell Value    D2    ${EXCEL_EVENT_SHEET}
+    Log To Console    \nEvent Name: ${SEARCH_EVENT_NAME}\nType: ${SEARCH_EVENT_TYPE}\nStart: ${SEARCH_START_DATE}\nEnd: ${SEARCH_END_DATE}\n
+    Sleep   5s
 
-    Sleep    5s
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Events")]      10s
-    Open Workbook       ${EXCEL_PATH}
-    ${SEARCH_EVENT_NAME}=    Get Cell Value    A2     ${EXCEL_EVENT_SHEET}
-    ${SEARCH_EVENT_TYPE}=    Get Cell Value    B2     ${EXCEL_EVENT_SHEET}
-    ${SEARCH_START_DATE}=    Get Cell Value    C2     ${EXCEL_EVENT_SHEET}
-    ${SEARCH_END_DATE}=    Get Cell Value      D2     ${EXCEL_EVENT_SHEET}
-    Log To Console    ${SEARCH_EVENT_NAME}\n${SEARCH_EVENT_TYPE}\n${SEARCH_START_DATE}\n${SEARCH_END_DATE}\n
-
-#    Log To Console    //android.view.ViewGroup[contains(@content-desc,'${SEARCH_EVENT_NAME}, ${SEARCH_EVENT_TYPE}, ${SEARCH_START_DATE}, ${SEARCH_END_DATE}')]
-    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]     10s
+    # Step 3: Scroll to matching event
+    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]    ${TIMEOUT}
+    Sleep   3s
     Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_EVENT_NAME}, ${SEARCH_EVENT_TYPE}, ${SEARCH_START_DATE}, ${SEARCH_END_DATE}"))
-    Sleep    10s
+    Sleep    5s
 
 
