@@ -4,7 +4,7 @@ Library    AppiumLibrary
 Library    OperatingSystem
 Library    Collections
 *** Variables ***
-${EXCEL_PATH}       ../Excel/Smart_Data.xlsx
+${EXCEL_PATH}       Excel/Smart_Data.xlsx
 
 
 
