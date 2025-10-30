@@ -2,7 +2,7 @@
 Library    AppiumLibrary
 Library    DateTime
 Resource   ../Excel/Excel_Keywords.resource
-Library     Touch_Keyword/Touch_Keyword.py
+Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
 ${CONTACT_NAME}     Eddie Davila
