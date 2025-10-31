@@ -38,8 +38,8 @@ Create Tour Plan from Contact
     Log To Console    Appointment day is: ${APPOINTMENT_DAY}
     ${APPOINTMENT_DAY}=    Evaluate    int("${APPOINTMENT_DAY}")
     Log To Console    Appointment day integer is: ${APPOINTMENT_DAY}
-    Wait Until Element Is Visible    xpath=(//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup)[2]     10s
-    Click Element    xpath=(//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup)[2]
+    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup     10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup
     Sleep    5s
 
     # Get and format selected appointment date
