@@ -121,34 +121,34 @@ Convert Tour Plan and execute Tour
 
 
     # Fill general survey questions
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Survey_name}"]      10s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView
-#    Sleep    5s
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_1}"]        10s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
-#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_2}"]     10s
-#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]    ${Answer_2}
-#    Sleep    5s
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_3}"]     10s
-#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]    ${Answer_3}
-#    Sleep    5s
-#
-#    # Wait and Click on Product Survey Tab
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Product"]    10s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
-#    Sleep    10s
-#
-#    # Fill product section
-#    Log To Console   >>>> Product section is selected
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
-#    Sleep  5s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]
-#    Sleep    5s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Survey_name}"]      10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+    Sleep    5s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_1}"]        10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
+    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup      10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_2}"]     10s
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]    ${Answer_2}
+    Sleep    5s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Question_3}"]     10s
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]    ${Answer_3}
+    Sleep    5s
+
+    # Wait and Click on Product Survey Tab
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Product"]    10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
+    Sleep    10s
+
+    # Fill product section
+    Log To Console   >>>> Product section is selected
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
+    Sleep  5s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_answer}"]      10s
+    Click Element    xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]
+    Sleep    5s
 
 
     # Wait and Click on S&T Survey Tab
@@ -158,9 +158,9 @@ Convert Tour Plan and execute Tour
     Sleep    10s
 
 
-#   Need to comment below 2 lines after general and product survey is displayed.
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
-    Sleep    5s
+##   Need to comment below 2 lines after general and product survey is displayed.
+#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+#    Sleep    5s
 
 
     # Fill S&T section

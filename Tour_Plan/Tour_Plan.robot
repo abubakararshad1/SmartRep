@@ -74,6 +74,7 @@ Create Tour Plan from Contact
     # Set tour duration to 10 minutes
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup      10s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup
+    Sleep    3s
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup       10s
     Sleep    10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="10"]
