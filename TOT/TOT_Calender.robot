@@ -1,10 +1,12 @@
 *** Settings ***
 Library     AppiumLibrary
 Library     DateTime
+Library     ../Touch_Keyword/Touch_Keyword.py
+
 
 *** Variables ***
 ${EVENT_TYPE}      Time-off
-${STRT_DATE}      30
+${STRT_DATE}      17
 ${FIRST_QUART}      Business Travel
 ${ACTIVITY_TYPE}       Tour Plan
 ${PAGINTATION}                100
@@ -31,7 +33,7 @@ Create TOT
         Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup     20s
         Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${STRT_DATE}"]    20s
         Click Element   xpath=//android.widget.TextView[@text="${STRT_DATE}"]
-        Sleep    3s
+        Sleep    5s
         ${END_DATE}=    Get Element Attribute    xpath=//android.widget.TextView[@text="End Date"]//following-sibling::android.view.ViewGroup//android.view.ViewGroup    content-desc
         Log To Console  System date format is: ${END_DATE}
         ${END_DATE}=    Convert Date    ${END_DATE}       result_format=%Y-%m-%d    date_format=%d/%m/%Y
@@ -50,6 +52,7 @@ Create TOT
         Sleep    5s
         Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Save"]       10s
         Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
+        Sleep    3s
         Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Calendar"])[1]     10s
         Sleep    5s
 #17 Verify that the user can view the Schedule Time Off in the Activity tab.
@@ -57,17 +60,28 @@ Create TOT
         Click Element   xpath=//android.widget.TextView[@text="Activities"]
         Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Activities"])[1]     10s
         Sleep    5s
-        Click Element    xpath=//android.widget.TextView[@text="${ACTIVITY_TYPE}"]
-        Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup   10s
-        Click Text      ${EVENT_TYPE1}
-        Sleep    5s
+
+            # Try to check if "Tour Plan" is already visible
+        ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="${EVENT_TYPE1}"]    5s
+
+        IF    not ${is_visible}
+        Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
+#        Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
+        Tap At Coordinates  85  560
+#        Click Element    xpath=//android.widget.TextView[@text="${EVENT_TYPE1}"]
+        END
+
+
+        Sleep    3s
+
+#        Click Element    xpath=//android.widget.TextView[@text="${ACTIVITY_TYPE}"]
+#        Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup   10s
+#        Click Text      ${EVENT_TYPE1}
+#        Sleep    5s
         Wait Until Element Is Visible    xpath=//android.widget.EditText[@resource-id="@undefined/input"]           10s
-        Click Element       xpath=//android.widget.EditText[@resource-id="@undefined/input"]
+#        Click Element       xpath=//android.widget.EditText[@resource-id="@undefined/input"]
         Sleep    5s
         Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${END_DATE}
         Sleep    5s
         Click Element    xpath=(//android.widget.TextView[@text="${END_DATE}"])[1]
-        Click Element    xpath=(//android.widget.TextView[@text="${END_DATE}"])[1]
         Sleep    10s
-
-
