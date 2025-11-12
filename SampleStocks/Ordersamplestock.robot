@@ -10,7 +10,7 @@ ${PLANNED_SAMPLES}       Detailing
 
 *** Test Cases ***
 
-Order smaple stock
+Order sample stock
 #click sample stock
     click element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
     click element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
@@ -43,8 +43,9 @@ Order smaple stock
 #Sample Order Date
     Sleep    10s
     Click Element    xpath=//android.widget.TextView[@text="Samples Order Date"]/following-sibling::android.view.ViewGroup/android.widget.TextView
+    Sleep    3S
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup     10s
-    Sleep    10s
+    Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${SAMPLE_ORDER_DATE}"]
 #Planned Usage of Samples
     Sleep    5s

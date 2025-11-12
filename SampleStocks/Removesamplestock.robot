@@ -3,7 +3,7 @@
 Library     AppiumLibrary
 Resource    varaibles.resource
 *** Test Cases ***
-Remove smaple stock
+Remove sample stock
     #click sample stock
     Click Element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
 #click on the beclomatason 20ml
@@ -19,9 +19,6 @@ Remove smaple stock
 #Number of samples removed from the stock: 20
     Sleep    2s
     Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]    ${REMOVED_STOCK_QTY}
-##Removed approved by stock manager: (Checked)
-#    Sleep    2s
-#    Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[1]
 #Stock reduction reason: Past Expiry Date
     Sleep    2s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup     10s
