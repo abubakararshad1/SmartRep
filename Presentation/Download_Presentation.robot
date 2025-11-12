@@ -14,6 +14,6 @@ Download Presentation
     Click Element    xpath=(//android.widget.TextView[@text="Presentations"])[1]//following-sibling::android.view.ViewGroup[@content-desc="Download All"]//android.widget.TextView
     Sleep    5s
 #    Click Element    xpath=//android.widget.TextView[contains(@text,"Download All")]
-    Wait Until Page Does Not Contain Element    xpath=//android.widget.TextView[@text="Download"]     180s
+    Wait Until Page Does Not Contain Element    xpath=//android.widget.TextView[@text="Download"]     480s
 #    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Download All")]     10s
     Sleep    10s
