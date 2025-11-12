@@ -1,23 +1,24 @@
 *** Settings ***
 Library     AppiumLibrary
 Library     DateTime
-Library     ../Touch_Keyword/Touch_Keyword.py
+Library    ../Touch_Keyword/Touch_Keyword.py
 Resource   ../Excel/Excel_Keywords.resource
 
 *** Variables ***
+${CONTACT_NAME}                 Eddie Davila
 ${PRESENTATION_NAME}            Presentation Sample 1
 ${EXCEL_TOUR_PLAN_SHEET}        Tour Plan
-${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution
+${EXCEL_TOUR_EXE_WITH_PRES_SHEET}     Tour Execution With Presentation
 
 *** Test Cases ***
-Execute Tour
+Execute Tour With Presentation
     [Documentation]    Executes a Tour with selected contact, enters tour execution details, runs presentation, and verifies from Activity tab.
 
     # Navigate to Contacts tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Contact")])[1]     10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Contact")]     10s
 
     # Wait for contact search bar to load
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
@@ -93,7 +94,7 @@ Execute Tour
     # Pause and Resume presentation
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="PAUSE"]    10s
     Click Element    xpath=//android.widget.Button[@text="PAUSE"]
-    Sleep    5s
+    Sleep    10s
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="RESUME"]    10s
     Click Element    xpath=//android.widget.Button[@text="RESUME"]
     Sleep    5s
@@ -114,7 +115,7 @@ Execute Tour
 
     Open Or Create Workbook And Sheet       ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    A1    Tour Execution Contact Name              ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
-    Write To Cell    A2    ${SEARCH_CONTACT_NAME}           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+    Write To Cell    A2    ${CONTACT_NAME}           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    B1    Tour Execution Appointment Date          ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    B2    ${TOUR_EXECUTION_DATE}     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Write To Cell    C1    Tour Execution Appointment Time           ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
@@ -133,28 +134,45 @@ Execute Tour
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact")]    10s
     Sleep    5s
 
-    Open Workbook       ${EXCEL_PATH}
-    ${TOUR_EXE_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
-    ${TOUR_EXE_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
-    ${TOUR_EXE_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
-    Log To Console    \n${TOUR_EXE_CONTACT_NAME}\n${TOUR_EXE_DATE}\n${TOUR_EXE_TIME}\n
-#
+#View the Executed Tour With Presentation edetailing
 #    # Navigate to Activity tab
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
+#    Sleep    5s
 #    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]    10s
 #
-#    # Filter by Tour Plan then switch to Tour Execution
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Tour Plan"]
+#    # Try to check if "Tour Execution" is already visible
+#    ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    5s
+#    IF    not ${is_visible}
+#    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
 #    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
 #    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
-#    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Tour Execution"]    10s
+#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
+#    END
+#
 #    Sleep    3s
 #
-#    # Search by contact and verify tour execution data
-#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${TOUR_EXE_CONTACT_NAME}
-#    Sleep    2s
-#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${TOUR_EXE_CONTACT_NAME}")])[1]    10s
+#    # Open Workbook and read data
+#
+#    Open Workbook       ${EXCEL_PATH}
+#    ${SEARCH_TOUR_EXE_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+#    ${SEARCH_TOUR_EXE_DATE}=    Get Cell Value    B2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+#    ${SEARCH_TOUR_EXE_TIME}=    Get Cell Value    C2     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
+#    Log To Console    \n${SEARCH_TOUR_EXE_CONTACT_NAME}\n${SEARCH_TOUR_EXE_DATE}\n${SEARCH_TOUR_EXE_TIME}\n
+#
+#    # Search and select the contact from the Tour Execution list
+#
+#    # Input the contact name in the search bar
+#    # This helps to filter and locate the relevant activity record quickly.
+#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${SEARCH_TOUR_EXE_CONTACT_NAME}
+#    Sleep    5s
+#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${SEARCH_TOUR_EXE_CONTACT_NAME}")])[1]    10s
 #    Sleep    3s
-#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${TOUR_EXE_CONTACT_NAME}, ${TOUR_EXE_DATE}, ${TOUR_EXE_TIME}"))
+#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_TOUR_EXE_CONTACT_NAME}, ${SEARCH_TOUR_EXE_DATE}, ${SEARCH_TOUR_EXE_TIME}"))
+#    Sleep    10s
+#
+#    # Wait for the "Tour Execution" label to confirm that the correct entry has been opened
+#    # This acts as a validation step that the navigation to the right screen was successful.
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]        10s
+#
 #    Sleep    10s
