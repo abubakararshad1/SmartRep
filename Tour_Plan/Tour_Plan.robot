@@ -2,11 +2,11 @@
 Library    AppiumLibrary
 Library    DateTime
 Resource   ../Excel/Excel_Keywords.resource
-
+Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
-${CONTACT_NAME}     Sarah Thompson
-${HOSPITAL_NAME}    Alpha Hospital
+${CONTACT_NAME}     Eddie Davila
+${HOSPITAL_NAME}    Victoria Hospital
 ${EXCEL_TOUR_PLAN_SHEET}     Tour Plan
 #${APPOINTMENT_DAY}      18
 
@@ -16,7 +16,7 @@ Create Tour Plan from Contact
     # Navigate to the "Contacts" tab
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Contact")])[1]     10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Contact")]     10s
 
     # Search and select the contact
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
@@ -29,12 +29,16 @@ Create Tour Plan from Contact
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${HOSPITAL_NAME}, Active"]/android.view.ViewGroup[5]/android.view.ViewGroup
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Plan"]     10s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup
-    Sleep    20s
+    Sleep    5s
 
     # Select the date from calendar using appointment day variable
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup    15s
-
+    
     ${APPOINTMENT_DAY}=    Get Current Date    result_format=%d
+    Log To Console    Appointment day is: ${APPOINTMENT_DAY}
+    ${APPOINTMENT_DAY}=    Evaluate    int("${APPOINTMENT_DAY}")
+    Log To Console    Appointment day integer is: ${APPOINTMENT_DAY}
+    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup     10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="${APPOINTMENT_DAY}"]/android.view.ViewGroup
     Sleep    5s
 
@@ -51,12 +55,12 @@ Create Tour Plan from Contact
     Sleep    5s
 
     # Swipe on hour wheel to set desired hour
-    Swipe    1428    709    1280    0    800
-    Sleep    2s
+    Swipe    1428    709    1280    0    200
+    Sleep    5s
 
     # Swipe on minute wheel to set desired minute
-    Swipe    1575    891    1280    0    800
-    Sleep    2s
+    Swipe    1575    891    1280    0    200
+    Sleep    5s
 
     # Confirm time selection
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Select"]
@@ -70,6 +74,7 @@ Create Tour Plan from Contact
     # Set tour duration to 10 minutes
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup      10s
     Click Element    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup
+    Sleep    3s
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup       10s
     Sleep    10s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="10"]
@@ -90,6 +95,7 @@ Create Tour Plan from Contact
     Save Workbook
 
     # Verify contact screen is reloaded after saving tour
+    Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text, "Contact : ${CONTACT_NAME}")]     10s
     Sleep    5s
 
@@ -102,7 +108,7 @@ View Tour Plan
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
     Sleep    5s
-    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"Activities")])[1]     10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
     Sleep    3s
 
     # Try to check if "Tour Plan" is already visible
@@ -117,8 +123,8 @@ View Tour Plan
 
     IF    not ${is_visible}
     Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
-    Click Element    xpath=//android.widget.TextView[@text="Tour Plan"]
+#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
+    Tap At Coordinates  65  325
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]    10s
     END
 
