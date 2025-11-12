@@ -3,7 +3,7 @@
 Library     AppiumLibrary
 Resource    varaibles.resource
 *** Test Cases ***
-Remove smaple stock
+Remove sample stock
     #click sample stock
     Click Element  xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup
 #click on the beclomatason 20ml
