@@ -19,6 +19,12 @@ Account DCR
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Accounts"]
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Accounts"]
     Sleep    3s
+
+    # Search the account
+    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${OLD_ACCOUNT_NAME}
+    Sleep    10s
+
     #select Account from list
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Account")]     10s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${OLD_ACCOUNT_NAME}"]       10s

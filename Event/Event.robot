@@ -6,9 +6,9 @@ Resource   ../Excel/Excel_Keywords.resource
 *** Variables ***
 #${EXCEL_PATH}    ../Excel/Smart_Data.xlsx
 ${EXCEL_EVENT_SHEET}     Event
-${EVENT_START_DATE}     23
+${EVENT_START_DATE}     24
 ${EVENT_END_DATE}       24
-${PAYMENT_DATE}         23
+${PAYMENT_DATE}         24
 ${EVENT_NAME}           Healthcare Leadership Roundtable
 ${ESTIMATED_BUDGET}     50000
 ${EVENTS_COUNTY}        United Arab Emirates

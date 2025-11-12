@@ -135,7 +135,7 @@ Verify that user can Add new expense in the Expense module
     Sleep    5s
     Input Text    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input/input"]    ${RELATED_ACCOUNT}
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup       10s
-    Click Element    xpath=(//android.widget.TextView[@text="${RELATED_ACCOUNT}"])[3]
+    Click Element    xpath=//android.widget.TextView[@text="${RELATED_ACCOUNT}"]
 #Related Contact: Dr. Eddie Davila
     Sleep    5s
     Click Element    xpath=//android.widget.EditText[@resource-id="@@autocomplete/input-anchor/input" and @text="Search Contact"]
