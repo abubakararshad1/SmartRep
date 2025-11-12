@@ -6,8 +6,8 @@ Library     AppiumLibrary
 ${REMOTE_URL}    http://localhost:4723
 ${PLATFORM_NAME}    Android
 #${DEVICE_NAME}    0E54805I241002DE
-#${DEVICE_NAME}    emulator-5554
-${DEVICE_NAME}    R52N10AVLQR
+${DEVICE_NAME}    emulator-5554
+#${DEVICE_NAME}    R52N10AVLQR
 ${APP_PACKAGE}       com.smartrep
 ${APP_ACTIVITY}      com.smartrep.MainActivity
 ${UI_AUTOMATION}     uiautomator2
