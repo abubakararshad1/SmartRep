@@ -3,7 +3,7 @@ Library     AppiumLibrary
 
 *** Variables ***
 #Account Info
-${OLD_ACCOUNT_NAME}      Alpha Hospital
+${OLD_ACCOUNT_NAME}      Victoria Hospital
 ${NEW_ACCOUNT_NAME}    Ravindra Hospital
 ${DCR_ACCOUNT_PRIORITY}    B
 ${DCR_ACCOUNT_ACTION}       Update Account
@@ -19,6 +19,12 @@ Account DCR
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Accounts"]
     Click Element   xpath=//android.view.ViewGroup[@content-desc="Accounts"]
     Sleep    3s
+
+    # Search the account
+    Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]     10s
+    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${OLD_ACCOUNT_NAME}
+    Sleep    10s
+
     #select Account from list
     Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Account")]     10s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${OLD_ACCOUNT_NAME}"]       10s
@@ -54,6 +60,3 @@ Verify Account DCR
     Wait Until Element Is Visible    xpath=//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]     10s
     Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${NEW_ACCOUNT_NAME}, ${DCR_ACCOUNT_ACTION}"))
     Sleep    10s
-
-
-
