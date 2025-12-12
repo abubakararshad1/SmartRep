@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2025-12-09T16:41:07.824021" rpa="false" schemaversion="5">
+<suite id="s1" name="App &amp; User Login">
+<suite id="s1-s1" name="App" source="C:\Users\omar.moazzam\PycharmProjects\SmartRepGit\App\App.robot">
+<test id="s1-s1-t1" name="Open Application" line="30">
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:08.124061" level="TRACE">Arguments: [ 'http://localhost:4723' | platformName='Android' | deviceName='emulator-5554' | appPackage='com.smartrep' | appActivity='com.smartrep.MainActivity' | automationName='uiautomator2' | noReset='true' | autoGrantPermissions='true' ]</msg>
+<msg time="2025-12-09T16:41:08.124061" level="DEBUG">POST http://localhost:4723/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:deviceName": "emulator-5554", "appium:appPackage": "com.smartrep", "appium:appActivity": "com.smartrep.MainActivity", "appium:automationName": "uiautomator2", "appium:noReset": "true", "appium:autoGrantPermissions": "true"}}}</msg>
+<msg time="2025-12-09T16:41:08.174750" level="DEBUG">Starting new HTTP connection (1): localhost:4723</msg>
+<msg time="2025-12-09T16:41:13.020344" level="DEBUG">http://localhost:4723 "POST /session HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:13.020344" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"platformName":"Android","deviceName":"R52N10AVLQR","appPackage":"com.smartrep","appActivity":"com.smartrep.MainActivity","automationName":"uiautomator2","noReset":true,"autoGrantPermissions":true,"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","deviceName":"emulator-5554","appPackage":"com.smartrep","appActivity":"com.smartrep.MainActivity","automationName":"uiautomator2","noReset":true,"autoGrantPermissions":true},"deviceUDID":"R52N10AVLQR","pixelRatio":"2","statBarHeight":48,"viewportRect":{"left":0,"top":48,"width":2560,"height":1552},"deviceApiLevel":32,"platformVersion":"12","deviceManufacturer":"samsung","deviceModel":"SM-T860","deviceScreenSize":"2560x1600","deviceScreenDensity":320},"sessionId":"2dd965cc-917f-46fc-b5df-e1c153b5c454"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '961', 'ETag': 'W/"3c1-jN+qzcWaE+/zlHJHrq+x2sKG9jI"', 'Date': 'Tue, 09 Dec 2025 11:41:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:13.020344" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:13.022340" level="DEBUG">Opened application with session id 2dd965cc-917f-46fc-b5df-e1c153b5c454</msg>
+<msg time="2025-12-09T16:41:13.022340" level="TRACE">Return: 1</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${UI_AUTOMATION}</arg>
+<arg>noReset=true</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-12-09T16:41:08.124061" elapsed="4.898279"/>
+</kw>
+<doc>Launch SmartRep app, switch to Sandbox, login and open Tour Plan.</doc>
+<status status="PASS" start="2025-12-09T16:41:08.124061" elapsed="4.899230"/>
+</test>
+<status status="PASS" start="2025-12-09T16:41:07.864836" elapsed="5.159139"/>
+</suite>
+<suite id="s1-s2" name="User Login" source="C:\Users\omar.moazzam\PycharmProjects\SmartRepGit\SmartForce_Login\User_Login.robot">
+<test id="s1-s2-t1" name="Login functionality with an invalid username and password." line="6">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:13.029025" level="TRACE">Arguments: [ 'xpath=//android.widget.TextView[@text="https://login.salesforce.com"]' | '30s' ]</msg>
+<msg time="2025-12-09T16:41:13.029025" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.TextView[@text=\"https://login.salesforce.com\"]"}</msg>
+<msg time="2025-12-09T16:41:13.271612" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:13.271612" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-ffff-ffff0000000e","ELEMENT":"00000000-0000-010f-ffff-ffff0000000e"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-RhOPkfeEiYi5ORcqS1dhFVfNHuo"', 'Date': 'Tue, 09 Dec 2025 11:41:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:13.271612" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:13.271612" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-ffff-ffff0000000e/displayed {}</msg>
+<msg time="2025-12-09T16:41:13.737118" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-ffff-ffff0000000e/displayed HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:13.737118" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Tue, 09 Dec 2025 11:41:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:13.737118" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:13.737118" level="INFO">xpath criteria: //android.widget.TextView[@text="https://login.salesforce.com"]</msg>
+<msg time="2025-12-09T16:41:13.737118" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.TextView[@text="https://login.salesforce.com"]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-12-09T16:41:13.029025" elapsed="0.708093"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:13.748126" level="TRACE">Arguments: [ 'xpath=//android.widget.ImageView[@content-desc="More options"]' ]</msg>
+<msg time="2025-12-09T16:41:13.748126" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-12-09T16:41:13.748126" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc=\"More options\"]"}</msg>
+<msg time="2025-12-09T16:41:13.921534" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:13.921534" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-ffff-ffff00000013","ELEMENT":"00000000-0000-010f-ffff-ffff00000013"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-DrYOuyaRWo1afwKmYJk2Bwyx5tI"', 'Date': 'Tue, 09 Dec 2025 11:41:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:13.921534" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:13.921534" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-ffff-ffff00000013/click {}</msg>
+<msg time="2025-12-09T16:41:13.984859" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-ffff-ffff00000013/click HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:13.984859" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:41:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:13.984859" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:13.984859" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<msg time="2025-12-09T16:41:13.984859" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:41:13.748126" elapsed="0.236733"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:13.984859" level="TRACE">Arguments: [ 'xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]' | '10s' ]</msg>
+<msg time="2025-12-09T16:41:13.984859" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.TextView[@resource-id=\"com.smartrep:id/title\" and @text=\"Change Server\"]"}</msg>
+<msg time="2025-12-09T16:41:14.936870" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:14.936870" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-011c-ffff-ffff0000001a","ELEMENT":"00000000-0000-011c-ffff-ffff0000001a"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-sRApqClXEO1dVV0GqO1giASrG2M"', 'Date': 'Tue, 09 Dec 2025 11:41:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:14.936870" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:14.936870" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011c-ffff-ffff0000001a/displayed {}</msg>
+<msg time="2025-12-09T16:41:14.955192" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011c-ffff-ffff0000001a/displayed HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:14.955192" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Tue, 09 Dec 2025 11:41:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:14.955192" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:14.955192" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]</msg>
+<msg time="2025-12-09T16:41:14.955192" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-12-09T16:41:13.984859" elapsed="0.970333"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:14.956190" level="TRACE">Arguments: [ 'xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]' ]</msg>
+<msg time="2025-12-09T16:41:14.957186" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]'.</msg>
+<msg time="2025-12-09T16:41:14.957186" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.TextView[@resource-id=\"com.smartrep:id/title\" and @text=\"Change Server\"]"}</msg>
+<msg time="2025-12-09T16:41:15.013121" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:15.013121" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-011c-ffff-ffff0000001a","ELEMENT":"00000000-0000-011c-ffff-ffff0000001a"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-sRApqClXEO1dVV0GqO1giASrG2M"', 'Date': 'Tue, 09 Dec 2025 11:41:15 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:15.013121" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:15.013121" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011c-ffff-ffff0000001a/click {}</msg>
+<msg time="2025-12-09T16:41:16.153515" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011c-ffff-ffff0000001a/click HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:16.153515" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:41:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:16.153515" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:16.153515" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]</msg>
+<msg time="2025-12-09T16:41:16.153515" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="com.smartrep:id/title" and @text="Change Server"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:41:14.956190" elapsed="1.197325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:16.153515" level="TRACE">Arguments: [ 'xpath=//android.widget.RadioButton[@text="Sandbox\nhttps://test.salesforce.com"]' | '10s' ]</msg>
+<msg time="2025-12-09T16:41:16.153515" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.RadioButton[@text=\"Sandbox\nhttps://test.salesforce.com\"]"}</msg>
+<msg time="2025-12-09T16:41:16.254251" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:16.254251" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-011d-ffff-ffff00000036","ELEMENT":"00000000-0000-011d-ffff-ffff00000036"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-YKFLz+zrO1iPmogu5O0YjCm9/X0"', 'Date': 'Tue, 09 Dec 2025 11:41:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:16.254251" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:16.254251" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff00000036/displayed {}</msg>
+<msg time="2025-12-09T16:41:16.272387" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff00000036/displayed HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:16.272387" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Tue, 09 Dec 2025 11:41:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:16.272387" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:16.272387" level="INFO">xpath criteria: //android.widget.RadioButton[@text="Sandbox
+https://test.salesforce.com"]</msg>
+<msg time="2025-12-09T16:41:16.272387" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.RadioButton[@text="Sandbox\nhttps://test.salesforce.com"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-12-09T16:41:16.153515" elapsed="0.118872"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:16.273386" level="TRACE">Arguments: [ 'xpath=//android.widget.RadioButton[@text="Sandbox\nhttps://test.salesforce.com"]' ]</msg>
+<msg time="2025-12-09T16:41:16.274414" level="INFO">Clicking element 'xpath=//android.widget.RadioButton[@text="Sandbox
+https://test.salesforce.com"]'.</msg>
+<msg time="2025-12-09T16:41:16.274414" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.RadioButton[@text=\"Sandbox\nhttps://test.salesforce.com\"]"}</msg>
+<msg time="2025-12-09T16:41:16.336178" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:16.336178" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-011d-ffff-ffff00000036","ELEMENT":"00000000-0000-011d-ffff-ffff00000036"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-YKFLz+zrO1iPmogu5O0YjCm9/X0"', 'Date': 'Tue, 09 Dec 2025 11:41:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:16.336178" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:16.336178" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff00000036/click {}</msg>
+<msg time="2025-12-09T16:41:16.394697" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff00000036/click HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:16.394697" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:41:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:16.394697" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:16.394697" level="INFO">xpath criteria: //android.widget.RadioButton[@text="Sandbox
+https://test.salesforce.com"]</msg>
+<msg time="2025-12-09T16:41:16.394697" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.RadioButton[@text="Sandbox\nhttps://test.salesforce.com"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:41:16.273386" elapsed="0.121311"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:16.395697" level="TRACE">Arguments: [ 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]' ]</msg>
+<msg time="2025-12-09T16:41:16.396723" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<msg time="2025-12-09T16:41:16.396723" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.ImageButton[@content-desc=\"Navigate up\"]"}</msg>
+<msg time="2025-12-09T16:41:17.087003" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:17.087003" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-011d-ffff-ffff0000003b","ELEMENT":"00000000-0000-011d-ffff-ffff0000003b"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-DNZMTA7obJmuWersMIFumsCuMyk"', 'Date': 'Tue, 09 Dec 2025 11:41:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:17.087003" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:17.087003" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff0000003b/click {}</msg>
+<msg time="2025-12-09T16:41:17.136865" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-011d-ffff-ffff0000003b/click HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:17.136865" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:41:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:17.136865" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:17.136865" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Navigate up"]</msg>
+<msg time="2025-12-09T16:41:17.136865" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Navigate up"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:41:16.395697" elapsed="0.741168"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:41:17.146875" level="TRACE">Arguments: [ '10s' ]</msg>
+<msg time="2025-12-09T16:41:27.147630" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-12-09T16:41:27.147630" level="TRACE">Return: None</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:41:17.136865" elapsed="10.010765"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:27.147630" level="TRACE">Arguments: [ 'xpath=//android.widget.Button[@text="Log In to Sandbox"]' | '20s' ]</msg>
+<msg time="2025-12-09T16:41:27.147630" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.Button[@text=\"Log In to Sandbox\"]"}</msg>
+<msg time="2025-12-09T16:41:27.416662" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:27.416662" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-0000-006600000008","ELEMENT":"00000000-0000-010f-0000-006600000008"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-LOAKRLuuV9kfv80kE5oIWOqryfw"', 'Date': 'Tue, 09 Dec 2025 11:41:27 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:27.416662" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:27.416662" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/displayed {}</msg>
+<msg time="2025-12-09T16:41:27.440954" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/displayed HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:27.440954" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Tue, 09 Dec 2025 11:41:27 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:27.440954" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:27.440954" level="INFO">xpath criteria: //android.widget.Button[@text="Log In to Sandbox"]</msg>
+<msg time="2025-12-09T16:41:27.440954" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.Button[@text="Log In to Sandbox"]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-12-09T16:41:27.147630" elapsed="0.293324"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:41:27.442444" level="TRACE">Arguments: [ '10s' ]</msg>
+<msg time="2025-12-09T16:41:37.442747" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-12-09T16:41:37.442747" level="TRACE">Return: None</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:41:27.442444" elapsed="10.000303"/>
+</kw>
+<status status="PASS" start="2025-12-09T16:41:13.029025" elapsed="24.414323"/>
+</test>
+<test id="s1-s2-t2" name="Login functionality with an valid username and password." line="28">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:41:37.444902" level="TRACE">Arguments: [ '15s' ]</msg>
+<msg time="2025-12-09T16:41:52.445473" level="INFO">Slept 15 seconds.</msg>
+<msg time="2025-12-09T16:41:52.445473" level="TRACE">Return: None</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:41:37.444902" elapsed="15.000571"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:41:52.445473" level="TRACE">Arguments: [ 'xpath=//android.widget.Button[@text="Log In to Sandbox"]' | '20s' ]</msg>
+<msg time="2025-12-09T16:41:52.445473" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.Button[@text=\"Log In to Sandbox\"]"}</msg>
+<msg time="2025-12-09T16:41:53.134199" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:53.134199" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-0000-006600000008","ELEMENT":"00000000-0000-010f-0000-006600000008"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-LOAKRLuuV9kfv80kE5oIWOqryfw"', 'Date': 'Tue, 09 Dec 2025 11:41:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:53.134199" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:53.134199" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/displayed {}</msg>
+<msg time="2025-12-09T16:41:53.155625" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/displayed HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:41:53.155625" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Tue, 09 Dec 2025 11:41:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:41:53.155625" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:41:53.155625" level="INFO">xpath criteria: //android.widget.Button[@text="Log In to Sandbox"]</msg>
+<msg time="2025-12-09T16:41:53.155625" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.Button[@text="Log In to Sandbox"]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-12-09T16:41:52.445473" elapsed="0.710152"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:41:53.155625" level="TRACE">Arguments: [ '15s' ]</msg>
+<msg time="2025-12-09T16:42:08.155941" level="INFO">Slept 15 seconds.</msg>
+<msg time="2025-12-09T16:42:08.155941" level="TRACE">Return: None</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:41:53.155625" elapsed="15.000316"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-12-09T16:42:08.155941" level="TRACE">Arguments: [ 'xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText' | 'qa.smartcrm@bssuniversal.com' ]</msg>
+<msg time="2025-12-09T16:42:08.155941" level="INFO">Typing text 'qa.smartcrm@bssuniversal.com' into text field 'xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText'</msg>
+<msg time="2025-12-09T16:42:08.155941" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.webkit.WebView[@text=\"Login | Salesforce\"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText"}</msg>
+<msg time="2025-12-09T16:42:08.286429" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.286429" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-0000-006300000008","ELEMENT":"00000000-0000-010f-0000-006300000008"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-OEleRySmAwDydv9QmU/OWHkND2I"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.286429" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.286429" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006300000008/value {"text": "qa.smartcrm@bssuniversal.com", "value": ["q", "a", ".", "s", "m", "a", "r", "t", "c", "r", "m", "@", "b", "s", "s", "u", "n", "i", "v", "e", "r", "s", "a", "l", ".", "c", "o", "m"]}</msg>
+<msg time="2025-12-09T16:42:08.353911" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006300000008/value HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.353911" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.354944" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.354944" level="INFO">xpath criteria: //android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText</msg>
+<msg time="2025-12-09T16:42:08.354944" level="TRACE">Return: None</msg>
+<arg>xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText</arg>
+<arg>qa.smartcrm@bssuniversal.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:42:08.155941" elapsed="0.199003"/>
+</kw>
+<kw name="Input Password" owner="AppiumLibrary">
+<msg time="2025-12-09T16:42:08.354944" level="TRACE">Arguments: [ 'xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText' | 'Bss@2025' ]</msg>
+<msg time="2025-12-09T16:42:08.356033" level="INFO">Typing password into text field 'xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText'</msg>
+<msg time="2025-12-09T16:42:08.356033" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.webkit.WebView[@text=\"Login | Salesforce\"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText"}</msg>
+<msg time="2025-12-09T16:42:08.592125" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.592125" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-0000-005800000008","ELEMENT":"00000000-0000-010f-0000-005800000008"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-WOJjpeTtKXxgfI4Bz8t3/klkYnQ"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.592125" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.592125" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-005800000008/value {"text": "Bss@2025", "value": ["B", "s", "s", "@", "2", "0", "2", "5"]}</msg>
+<msg time="2025-12-09T16:42:08.623572" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-005800000008/value HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.623572" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.623572" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.623572" level="INFO">xpath criteria: //android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText</msg>
+<msg time="2025-12-09T16:42:08.623572" level="TRACE">Return: None</msg>
+<arg>xpath=//android.webkit.WebView[@text="Login | Salesforce"]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText</arg>
+<arg>Bss@2025</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:42:08.354944" elapsed="0.268628"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-12-09T16:42:08.623572" level="TRACE">Arguments: [ 'xpath=//android.widget.Button[@text="Log In to Sandbox"]' ]</msg>
+<msg time="2025-12-09T16:42:08.628613" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="Log In to Sandbox"]'.</msg>
+<msg time="2025-12-09T16:42:08.628613" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.Button[@text=\"Log In to Sandbox\"]"}</msg>
+<msg time="2025-12-09T16:42:08.791367" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.791367" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-010f-0000-006600000008","ELEMENT":"00000000-0000-010f-0000-006600000008"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-LOAKRLuuV9kfv80kE5oIWOqryfw"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.791367" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.791367" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/click {}</msg>
+<msg time="2025-12-09T16:42:08.868422" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/element/00000000-0000-010f-0000-006600000008/click HTTP/11" 200 0</msg>
+<msg time="2025-12-09T16:42:08.868660" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 09 Dec 2025 11:42:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:42:08.868660" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:42:08.868660" level="INFO">xpath criteria: //android.widget.Button[@text="Log In to Sandbox"]</msg>
+<msg time="2025-12-09T16:42:08.869165" level="TRACE">Return: None</msg>
+<arg>xpath=//android.widget.Button[@text="Log In to Sandbox"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-12-09T16:42:08.623572" elapsed="0.245593"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<msg time="2025-12-09T16:42:08.869165" level="TRACE">Arguments: [ '🟡 Salesforce sent a verification code to Outlook. Please \nenter it manually and click "Verify" in the browser. Then \npress OK to continue.' ]</msg>
+<msg time="2025-12-09T16:48:57.579510" level="TRACE">Return: None</msg>
+<arg>🟡 Salesforce sent a verification code to Outlook. Please \nenter it manually and click "Verify" in the browser. Then \npress OK to continue.</arg>
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2025-12-09T16:42:08.869165" elapsed="408.710345"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:48:57.589525" level="TRACE">Arguments: [ '10s' ]</msg>
+<msg time="2025-12-09T16:49:07.589918" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-12-09T16:49:07.589918" level="TRACE">Return: None</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:48:57.579510" elapsed="10.010408"/>
+</kw>
+<status status="PASS" start="2025-12-09T16:41:37.444304" elapsed="450.145614"/>
+</test>
+<test id="s1-s2-t3" name="Verify that the user can Synced data." line="39">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-09T16:49:07.589918" level="TRACE">Arguments: [ '15s' ]</msg>
+<msg time="2025-12-09T16:49:22.590524" level="INFO">Slept 15 seconds.</msg>
+<msg time="2025-12-09T16:49:22.590524" level="TRACE">Return: None</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-09T16:49:07.589918" elapsed="15.000606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-12-09T16:49:22.590524" level="TRACE">Arguments: [ 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]' | '20s' ]</msg>
+<msg time="2025-12-09T16:49:22.590524" level="DEBUG">POST http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements {"using": "xpath", "value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"}</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">http://localhost:4723 "POST /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/elements HTTP/11" 404 0</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Remote response: status=404 | data={"value":{"error":"invalid session id","message":"A session is either terminated or not started","stacktrace":"NoSuchDriverError: A session is either terminated or not started\n    at asyncHandler (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:311:15)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:514:15\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at logger (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\morgan\\index.js:144:5)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\body-parser\\lib\\read.js:137:5\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:507:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '3426', 'ETag': 'W/"d62-3UswWX3CEOWbnZOtFJwUZZgI1rA"', 'Date': 'Tue, 09 Dec 2025 11:49:22 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-12-09T16:49:22.592067" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">GET http://localhost:4723/session/2dd965cc-917f-46fc-b5df-e1c153b5c454/screenshot {}</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">http://localhost:4723 "GET /session/2dd965cc-917f-46fc-b5df-e1c153b5c454/screenshot HTTP/11" 404 0</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Remote response: status=404 | data={"value":{"error":"invalid session id","message":"A session is either terminated or not started","stacktrace":"NoSuchDriverError: A session is either terminated or not started\n    at asyncHandler (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:311:15)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:514:15\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at logger (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\morgan\\index.js:144:5)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at jsonParser (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\body-parser\\lib\\types\\json.js:113:7)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:91:12)\n    at trim_prefix (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at methodOverride (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\method-override\\index.js:65:14)\n    at Layer.handle [as handle_request] (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\omar.moazzam\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\express\\lib\\router\\index.js:280:10)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '5122', 'ETag': 'W/"1402-tc5mscfPBRaXFdc7mSj6b7Amc18"', 'Date': 'Tue, 09 Dec 2025 11:49:22 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Finished Request</msg>
+<msg time="2025-12-09T16:49:22.592067" level="FAIL">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\types\json.js:113:7)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at methodOverride (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\method-override\index.js:65:14)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 32, in wait_until_element_is_visible
+    self._wait_until_no_error(timeout, check_visibility)
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 148, in _wait_until_no_error
+    timeout_error = wait_func(*args)
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 25, in check_visibility
+    visible = self._is_visible(locator)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 691, in _is_visible
+    element = self._element_find(locator, True, False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 639, in _element_find
+    elements = self._element_finder.find(application, _locator, tag)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\locators\elementfinder.py", line 40, in find
+    return strategy(application, criteria, tag, constraints)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\locators\elementfinder.py", line 63, in _find_by_xpath
+    application.find_elements(by=AppiumBy.XPATH, value=criteria),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 420, in find_elements
+    return self.execute(RemoteCommand.FIND_ELEMENTS, {'using': by, 'value': value})['value'] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:507:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 850, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\types\json.js:113:7)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at methodOverride (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\method-override\index.js:65:14)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-12-09T16:49:22.592067" elapsed="0.000000">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at methodOverride (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\method-override\index.js:65:14)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)</status>
+</kw>
+<msg time="2025-12-09T16:49:22.592067" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at methodOverride (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\method-override\index.js:65:14)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)</msg>
+<msg time="2025-12-09T16:49:22.592067" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]</msg>
+<msg time="2025-12-09T16:49:22.592067" level="FAIL">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:507:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)</msg>
+<msg time="2025-12-09T16:49:22.592067" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 32, in wait_until_element_is_visible
+    self._wait_until_no_error(timeout, check_visibility)
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 148, in _wait_until_no_error
+    timeout_error = wait_func(*args)
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_waiting.py", line 25, in check_visibility
+    visible = self._is_visible(locator)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 691, in _is_visible
+    element = self._element_find(locator, True, False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 639, in _element_find
+    elements = self._element_finder.find(application, _locator, tag)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\locators\elementfinder.py", line 40, in find
+    return strategy(application, criteria, tag, constraints)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\locators\elementfinder.py", line 63, in _find_by_xpath
+    application.find_elements(by=AppiumBy.XPATH, value=criteria),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 420, in find_elements
+    return self.execute(RemoteCommand.FIND_ELEMENTS, {'using': by, 'value': value})['value'] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\omar.moazzam\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:507:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)</msg>
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="FAIL" start="2025-12-09T16:49:22.590524" elapsed="0.001543">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:507:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@resource-id="android:id/alertTitle" and @text="Sync Complete"]</arg>
+<arg>240s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1" and @text="OK"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Contacts"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-12-09T16:49:22.607783" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-12-09T16:49:07.589918" elapsed="15.017865">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:507:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)</status>
+</test>
+<status status="FAIL" start="2025-12-09T16:41:13.024950" elapsed="489.582833"/>
+</suite>
+<status status="FAIL" start="2025-12-09T16:41:07.824021" elapsed="494.783762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="App &amp; User Login">App &amp; User Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="App">App &amp; User Login.App</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s2" name="User Login">App &amp; User Login.User Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-09T16:49:22.592067" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at methodOverride (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\method-override\index.js:65:14)
+    at Layer.handle [as handle_request] (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\omar.moazzam\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)</msg>
+</errors>
+</robot>
