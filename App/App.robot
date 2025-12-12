@@ -1,5 +1,13 @@
 *** Settings ***
-Library     AppiumLibrary
+** Settings ***
+Library    AppiumLibrary
+Library    SeleniumLibrary
+#Library    AllureLibrary
+#Library    OperatingSystem
+#Suite Setup    Create Screenshot Directory
+#Test Teardown    Run Keywords
+#...    Run Keyword If    '${TEST_STATUS}' == 'FAIL'    Capture Page Screenshot    ${SCREENSHOT_DIR}/failed_${TEST NAME}.png
+#...    AND    Run Keyword If    '${TEST_STATUS}' == 'FAIL'    Allure Attach File    ${SCREENSHOT_DIR}/failed_${TEST NAME}.png    name=Failed Screenshot    attachments=image/png
 
 
 *** Variables ***
@@ -11,7 +19,6 @@ ${DEVICE_NAME}    emulator-5554
 ${APP_PACKAGE}       com.smartrep
 ${APP_ACTIVITY}      com.smartrep.MainActivity
 ${UI_AUTOMATION}     uiautomator2
-
 
 *** Test Cases ***
 
