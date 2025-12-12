@@ -23,8 +23,8 @@ Remove smaple stock
     Sleep    2s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup     10s
     Click Element    xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView      10s
-    Click Text    Past Expiry Date
+    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView      20s
+    Click Element    xpath=//android.widget.TextView[@text="Past Expiry Date"]
 
 #click save btn
     Sleep    2s
