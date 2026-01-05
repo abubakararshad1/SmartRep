@@ -1,0 +1,16 @@
+Index: App/App.robot
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*** Settings ***\r\nLibrary     AppiumLibrary\r\n\r\n\r\n*** Variables ***\r\n${REMOTE_URL}    http://localhost:4723\r\n${PLATFORM_NAME}    Android\r\n#${DEVICE_NAME}    0E54805I241002DE\r\n${DEVICE_NAME}    emulator-5554\r\n${APP_PACKAGE}       com.smartrep\r\n${APP_ACTIVITY}      com.smartrep.MainActivity\r\n${UI_AUTOMATION}     uiautomator2\r\n\r\n\r\n*** Test Cases ***\r\n\r\nOpen Application\r\n    [Documentation]    Launch SmartRep app, switch to Sandbox, login and open Tour Plan.\r\n    Open Application    ${REMOTE_URL}\r\n    ...    platformName=${PLATFORM_NAME}\r\n    ...    deviceName=${DEVICE_NAME}\r\n    ...    appPackage=${APP_PACKAGE}\r\n    ...    appActivity=${APP_ACTIVITY}\r\n    ...    automationName=${UI_AUTOMATION}\r\n    #    First time comment \"noReset\" Line so we can start app from scratch\r\n    #    2nd time mark \"noReset\" Line as uncomment ( As we are proceeding without resetting the app)\r\n#    ...    noReset=true             # (Optional) Prevents app data reset/close when starting sessions\r\n    ...    autoGrantPermissions=true
+===================================================================
+diff --git a/App/App.robot b/App/App.robot
+--- a/App/App.robot	(revision 7a19b4559bbb931c292b62232b04dc510ab93093)
++++ b/App/App.robot	(date 1761631356521)
+@@ -24,5 +24,5 @@
+     ...    automationName=${UI_AUTOMATION}
+     #    First time comment "noReset" Line so we can start app from scratch
+     #    2nd time mark "noReset" Line as uncomment ( As we are proceeding without resetting the app)
+-#    ...    noReset=true             # (Optional) Prevents app data reset/close when starting sessions
++    ...    noReset=true             # (Optional) Prevents app data reset/close when starting sessions
+     ...    autoGrantPermissions=true
+\ No newline at end of file
