@@ -6,7 +6,7 @@ Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
 ${EVENT_TYPE}      Time-off
-${STRT_DATE}      17
+${STRT_DATE}      22
 ${FIRST_QUART}      Business Travel
 ${ACTIVITY_TYPE}       Tour Plan
 ${PAGINTATION}                100
