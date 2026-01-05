@@ -5,9 +5,9 @@ Library     AppiumLibrary
 *** Variables ***
 
 ${EXPENSE_NAME}             Marketing Event Sponsorship
-${EXPENSE_START_DATE}       10
-${EXPENSE_END_DATE}         10
-${EXPENSE_DATE}             10
+${EXPENSE_START_DATE}       8
+${EXPENSE_END_DATE}         8
+${EXPENSE_DATE}             8
 ${EXPENSE_COUNTRY}          United Arab Emirates
 ${EXPENSE_BEHALF}           QA Team
 ${EXPENSE_STATUS}           Draft

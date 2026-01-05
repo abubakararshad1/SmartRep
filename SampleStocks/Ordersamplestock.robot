@@ -3,7 +3,7 @@ Library     AppiumLibrary
 Resource    Varaibles.resource
 
 *** Variables ***
-${SAMPLE_ORDER_DATE}      17
+${SAMPLE_ORDER_DATE}      15
 ${ORDER_FOR_STOCK}       50
 ${PLANNED_SAMPLES}       Detailing
 

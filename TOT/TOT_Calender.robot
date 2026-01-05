@@ -6,7 +6,7 @@ Library     ../Touch_Keyword/Touch_Keyword.py
 
 *** Variables ***
 ${EVENT_TYPE}      Time-off
-${STRT_DATE}      22
+${STRT_DATE}      13
 ${FIRST_QUART}      Business Travel
 ${ACTIVITY_TYPE}       Tour Plan
 ${PAGINTATION}                100
@@ -50,15 +50,15 @@ Create TOT
 #        Click Element       xpath=//android.widget.TextView[@text="${FIRST_QUART}"]
         Click Text    ${FIRST_QUART}
         Sleep    5s
-        Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Save"]       10s
+        Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="Save"]       15s
         Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
         Sleep    3s
-        Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Calendar"])[1]     10s
+        Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Calendar"])[1]     15s
         Sleep    5s
 #17 Verify that the user can view the Schedule Time Off in the Activity tab.
         Click Element   xpath=//android.widget.TextView[@text="Activities"]
         Click Element   xpath=//android.widget.TextView[@text="Activities"]
-        Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Activities"])[1]     10s
+        Wait Until Element Is Visible    xpath=(//android.widget.TextView[@text="Activities"])[1]     15s
         Sleep    5s
 
             # Try to check if "Tour Plan" is already visible

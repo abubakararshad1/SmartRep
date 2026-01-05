@@ -6,8 +6,8 @@ Resource   ../Excel/Excel_Keywords.resource
 *** Variables ***
 #${EXCEL_PATH}    ../Excel/Smart_Data.xlsx
 ${EXCEL_EVENT_SHEET}     Event
-${EVENT_START_DATE}     24
-${EVENT_END_DATE}       24
+${EVENT_START_DATE}     5
+${EVENT_END_DATE}       5
 ${PAYMENT_DATE}         24
 ${EVENT_NAME}           Healthcare Leadership Roundtable
 ${ESTIMATED_BUDGET}     50000
