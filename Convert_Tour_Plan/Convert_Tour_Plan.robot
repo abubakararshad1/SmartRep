@@ -24,10 +24,12 @@ ${Answer_2}                 9
 ${Answer_3}                 Lack of patient awareness
 
 # Product-specific survey
+${Product_Survey_name}      Product Effectiveness & Prescription Survey
 ${Product_question}         How effective do you find Miconazole for treating fungal infections?
 ${Product_answer}           Very Effective
 
 # S&T (Sales & Therapy) questions
+${S&T_Survey_name}          Pharma Product Distribution & Demand Survey
 ${S&T_question_1}           What factors influence your decision to choose Miconazole for treatment?
 ${S&T_question_2}           How frequently do you prescribe Miconazole for ENT-related fungal infections compared to other antifungal medications?
 ${S&T_question_3}           What outcomes have you observed in patients using Miconazole for ENT fungal infections?
@@ -117,7 +119,7 @@ Convert Tour Plan and execute Tour
 
 #   Swipe to Show Survey Questions
    Swipe    1280    1295    1280    519    500
-#    Swipe    1280    919    1280    519    500
+
     Sleep    2s
 
 
@@ -141,7 +143,9 @@ Convert Tour Plan and execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Product"]
     Sleep    10s
-
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_Survey_name}"]      10s
+#    Click Element    xpath=//android.widget.TextView[@text="Product Effectiveness & Prescription Survey"]
+#    Sleep    5s
     # Fill product section
     Log To Console   >>>> Product section is selected
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${Product_question}"]    10s
@@ -158,13 +162,38 @@ Convert Tour Plan and execute Tour
     Click Element    xpath=//android.view.ViewGroup[@content-desc="S And T"]
     Sleep    10s
 
+#Try to check if "S&T" is already visible
+    ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Question"]    10s
+    IF    not ${is_visible}
+        Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+        Sleep    5s
+    END
+
 
 ##   Need to comment below 2 lines after general and product survey is displayed.
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${S&T_Survey_name}"]
 #    Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
 #    Sleep    5s
+     # Step 1: Check if the parent XPath exists
+    ${exists}=    Run Keyword And Return Status    Page Should Contain Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]    5s
 
+    # Step 2: Only proceed if it exists
+    IF    ${exists}
+        Log    Survey exists, checking for Question element
+        ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Question"]    10s
+        IF    not ${is_visible}
+            Log    Question not visible, clicking SVG
+            Click Element    xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution & Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView
+            Sleep    5s
+        ELSE
+            Log    Question is already visible, no action needed
+        END
+    ELSE
+        Log    Survey does not exist, skipping
+    END
 
     # Fill S&T section
+
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${S&T_question_1}"]        10s
     Click Element    xpath =//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView
     Sleep    5s
@@ -272,14 +301,18 @@ View the Executed Tour
 #    ...    AND    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
 #    ...    AND    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
 
-    IF    not ${is_visible}
-    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-    Sleep    2s
-#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2 ]/android.view.ViewGroup    10s
-#    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
-    Tap At Coordinates  105   400
-    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
-    END
+#    IF    not ${is_visible}
+#    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
+#    Sleep    2s
+##    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2 ]/android.view.ViewGroup    10s
+##    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
+#    Tap At Coordinates  105   400
+#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
+#    END
+
+
+
+
 
     Sleep    3s
 
