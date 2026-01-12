@@ -283,70 +283,29 @@ Convert Tour Plan and execute Tour
 
 
 View the Executed Tour
-
-#    #    Verify Tour Execution from the Activity Tab
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
-#    Click Element    xpath=//android.view.ViewGroup[@content-desc="Activities"]
-#    Sleep    5s
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"Activities")]     10s
-#    Sleep    3s
-#
-#    # Try to check if "Tour Execution" is already visible
-#    ${is_visible}=    Run Keyword And Return Status    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    5s
-
-    # If NOT visible, execute the steps
-#    Run Keyword Unless    ${is_visible}    Run Keywords
-#    ...    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-#    ...    AND    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup    10s
-#    ...    AND    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
-#    ...    AND    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
-
-#    IF    not ${is_visible}
-#    Click Element    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]
-#    Sleep    2s
-##    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2 ]/android.view.ViewGroup    10s
-##    Click Element    xpath=//android.widget.TextView[@text="Tour Execution"]
-#    Tap At Coordinates  105   400
-#    Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Execution"]    10s
-#    END
-
-
-
-
-
-    Sleep    3s
-
     Open Workbook       ${EXCEL_PATH}
     ${CONVERT_PLAN_CONTACT_NAME}=        Get Cell Value     A2     ${EXCEL_CONVERT_PLAN_SHEET}
     ${CONVERT_PLAN_DATE}=    Get Cell Value    B2     ${EXCEL_CONVERT_PLAN_SHEET}
     ${CONVERT_PLAN_TIME}=    Get Cell Value    C2     ${EXCEL_CONVERT_PLAN_SHEET}
     Log To Console    \n${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n
-
-    # Search and select the contact from the Tour Execution list
-
-    # Input the contact name in the search bar
-    # This helps to filter and locate the relevant activity record quickly.
-#    Input Text    xpath=//android.widget.EditText[@resource-id="@undefined/input"]    ${CONVERT_PLAN_CONTACT_NAME}
-#    Sleep    2s
-#
-#    # Wait until the contact name appears in the search results
-#    # Ensures that the app has loaded the result before attempting any further action.
-#    Wait Until Element Is Visible    xpath=(//android.widget.TextView[contains(@text,"${CONVERT_PLAN_CONTACT_NAME}")])[1]     10s
-#    Sleep    3s
-#
-#    # Scroll through the list to find the matching tour execution entry based on contact name, date, and time
-#    # This step ensures we're selecting the exact planned activity for execution verification.
-#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_CONTACT_NAME}, ${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))
-#    Sleep    10s
-#
-#    # Wait for the "Tour Execution" label to confirm that the correct entry has been opened
-#    # This acts as a validation step that the navigation to the right screen was successful.
-#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]        10s
        Sleep    3s
    Click Element    xpath=//android.view.ViewGroup[@content-desc="Contacts"]/android.view.ViewGroup/android.view.ViewGroup
-   Sleep    5s
-   Click Element    android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))
+
+
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${CONVERT_PLAN_CONTACT_NAME}"]    10s
+#
+#    Click Element       xpath=//android.widget.TextView[@text="${CONVERT_PLAN_CONTACT_NAME}"]
+    Sleep    5s
+#    Swipe    1319    384    1319    994    500
+#    Swipe    1319    384    1319    994    500
+#    Swipe Up    1280    648    1238    109
+#    Swipe Up    1280    648    1238    109
+#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().textContains("2026-01-07, 01:15"))#
+#    Click Element    android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().descriptionContains("Victoria Hospital, 2026-01-07, 01:15"))
+    Click Element    android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))
     Sleep    5s
     Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="Tour Execution"]        10s
+
+
 
     Sleep    10s
