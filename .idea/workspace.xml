@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ded302c-85c6-4d43-b9ae-46e9a841fdc6" name="Changes" comment="code change">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/App.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coaching/Coaching.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convert_Tour_Plan/Convert_Tour_Plan.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convert_Tour_Plan/Convert_Tour_Plan_ab.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DCR/Account-DCR.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DCR/Contact-DCR.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event/Activities.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event/Event.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Excel/Excel_Keywords.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Excel/Smart_Data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expenses/Expenses.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Output/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Download_Presentation.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/Execute_Tour_With_Presentation.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/View_Presentation.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SampleStocks/Ordersamplestock.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SampleStocks/Removesamplestock.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SampleStocks/Varaibles.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartForce_Login/User_Login.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Survey/Survey_Without_Call.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOT/TOT_Calender.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tour_Plan/Tour_Plan.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands" beforeDir="false" afterPath="$PROJECT_DIR$/commands" afterDir="false" />
-    </list>
+    <list default="true" id="3ded302c-85c6-4d43-b9ae-46e9a841fdc6" name="Changes" comment="code change" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,12 +33,12 @@
     &quot;assignee&quot;: &quot;omurbaig&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/abubakararshad1/SmartRep.git&quot;,
-    &quot;accountId&quot;: &quot;44d69b72-2911-43b7-81d3-4ccaaf2a6494&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/abubakararshad1/SmartRep.git",
+    "accountId": "bfff1791-24b7-45fa-8475-9d60d5ef1b5b"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DCR TestCases/Account-DCR.robot" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -309,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767590820425</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="code change">
+      <option name="closed" value="true" />
+      <created>1768476067179</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1768476067179</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

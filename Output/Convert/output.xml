@@ -1,0 +1,1932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-01-14T15:30:57.119694" rpa="false" schemaversion="5">
+<suite id="s1" name="Convert Tour Plan TestCases" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Convert_Tour_Plan TestCases">
+<suite id="s1-s1" name="Convert Tour Plan" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Convert_Tour_Plan TestCases\Convert_Tour_Plan.robot">
+<test id="s1-s1-t1" name="Verify that the user can Convert the Tour Plan and execute the Tour" line="50">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-14T15:30:59.171686" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Activities"]'.</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-14T15:30:59.171686" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-14T15:30:59.171686" elapsed="0.004097">No application is open</status>
+</kw>
+<msg time="2026-01-14T15:30:59.182848" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:30:59.183265" level="FAIL">No application is open</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Activities"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-14T15:30:59.168160" elapsed="0.015687">No application is open</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Activities"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.184844" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.184844" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[contains(@text,"Activities")]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.185479" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.185845" elapsed="0.000000"/>
+</kw>
+<kw name="Open Workbook" owner="ExcelSage">
+<arg>${EXCEL_PATH}</arg>
+<doc>The ``Open Workbook`` keyword opens an Excel file by its name, checks if the file exists, and raises an ``ExcelFileNotFoundError`` if it doesn't. It uses openpyxl's ``load_workbook`` to load the workbook, allowing additional options via ``**kwargs``. Once the workbook is opened, it is set as the active workbook and logged. The keyword returns the loaded workbook object for further use.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.185845" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_CONTACT_NAME}</var>
+<arg>A2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.185845" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_APPOINTMENT_DATE}</var>
+<arg>B2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.186846" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_APPOINTMENT_TIME}</var>
+<arg>C2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187230" elapsed="0.000000"/>
+</kw>
+<kw name="Close Workbook" owner="ExcelSage">
+<doc>The ``Close Workbook`` keyword is responsible for closing the active workbook. It first checks if a workbook
+is currently open by verifying the presence of an active workbook. If no workbook is open, it raises a
+``WorkbookNotOpenError``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187230" elapsed="0.000615"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187924" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187924" elapsed="0.000000"/>
+</kw>
+<kw name="Tap At Coordinates" owner="Touch_Keyword">
+<arg>65</arg>
+<arg>325</arg>
+<status status="NOT RUN" start="2026-01-14T15:30:59.188741" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.188741" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.188967" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187924" elapsed="0.001043"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:30:59.187924" elapsed="0.001043"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.189740" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input"]</arg>
+<arg>${SEARCH_CONTACT_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.190740" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.190740" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=(//android.widget.TextView[contains(@text,"${SEARCH_CONTACT_NAME}")])[1]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.190740" elapsed="0.000998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.191738" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_CONTACT_NAME}, ${SEARCH_APPOINTMENT_DATE}, ${SEARCH_APPOINTMENT_TIME}"))</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.192741" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.193741" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Plan"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.194987" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Convert 1:1"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.196259" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.196745" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Execution"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.196745" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.197740" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<var>${TOUR_EXECUTION_DATE}</var>
+<arg>xpath=//android.widget.TextView[@text="Date"]/following-sibling::*[1]/android.view.ViewGroup</arg>
+<arg>content-desc</arg>
+<doc>Returns the element attribute using the given ``attribute``, e.g. name, value, etc.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.198193" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected date is: ${TOUR_EXECUTION_DATE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.198747" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<var>${TOUR_EXECUTION_DATE}</var>
+<arg>${TOUR_EXECUTION_DATE}</arg>
+<arg>result_format=%Y-%m-%d</arg>
+<arg>date_format=%d/%m/%Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.198747" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected date is: ${TOUR_EXECUTION_DATE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.199722" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.200720" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<var>${TOUR_EXECUTION_TIME}</var>
+<arg>xpath=//android.widget.TextView[@text="Time"]/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup</arg>
+<arg>content-desc</arg>
+<doc>Returns the element attribute using the given ``attribute``, e.g. name, value, etc.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.200720" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected time is: ${TOUR_EXECUTION_TIME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.201720" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.201720" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Survey"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.201720" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Survey"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.202720" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.202720" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.203722" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.203722" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Survey_name}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.203722" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.204722" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.204992" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_1}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.205721" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.206724" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.207723" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.208723" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_2}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.208723" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]</arg>
+<arg>${Answer_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.209823" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.209823" elapsed="0.001015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_3}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.210995" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]</arg>
+<arg>${Answer_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.211839" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.212839" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Product"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.213836" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Product"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.214837" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Product"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.215837" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.216082" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt;&gt; Product section is selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.216082" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Product_question}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.216837" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.217075" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.217847" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Product_answer}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.217847" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.217847" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.219165" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="S And T"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.219165" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="S And T"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.219165" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="S And T"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.220140" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.220140" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.TextView[@text="Question"]</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.235508" elapsed="0.000637"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.238144" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.238714" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:30:59.237145" elapsed="0.001569"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:30:59.237145" elapsed="0.001569"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${exists}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.238714" elapsed="0.000974"/>
+</kw>
+<if>
+<branch type="IF" condition="${exists}">
+<kw name="Log" owner="BuiltIn">
+<arg>Survey exists, checking for Question element</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.240690" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.TextView[@text="Question"]</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.241969" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Question not visible, clicking SVG</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.241969" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.242967" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.242967" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:30:59.241969" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Question is already visible, no action needed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.243676" elapsed="0.000292"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:30:59.242967" elapsed="0.001123"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:30:59.241969" elapsed="0.002121"/>
+</if>
+<status status="NOT RUN" start="2026-01-14T15:30:59.239828" elapsed="0.004262"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Survey does not exist, skipping</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.244616" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:30:59.244090" elapsed="0.000526"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:30:59.239828" elapsed="0.006782"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_1}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.250621" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath =//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.255007" elapsed="0.000613"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.258924" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.259998" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${S&amp;T_answer_1}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.259998" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.261007" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_2}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.262009" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]</arg>
+<arg>${S&amp;T_answer_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.263189" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.264010" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_3}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.264682" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]</arg>
+<arg>${S&amp;T_answer_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.304636" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.305691" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.305691" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="Prio 1 - Brand Discussed"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.306638" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=(//android.widget.EditText[@text="Search Usecases.."])[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.306831" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.306831" elapsed="0.000519"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup</arg>
+<arg>20s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.307423" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.307423" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Use_Case}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.308053" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.308598" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="Select Option"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.309572" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Classification}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.309572" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Classification}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.309572" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.310570" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.310570" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Product_message}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.311575" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Product_message}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.311575" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.311575" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.312573" elapsed="0.001001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Product}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.314573" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Product}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.314573" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.314573" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]/android.view.ViewGroup</arg>
+<arg>20s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.315572" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]//following-sibling::android.widget.EditText</arg>
+<arg>${Brand_Discuss_input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.316571" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.316571" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.316571" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.317861" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.318572" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Add New"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.319154" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.319988" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Product_Sku}, ${Product_Sku}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.319988" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.319988" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.320986" elapsed="0.000000"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<doc>Clears the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.320986" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.321985" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.321985" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.321985" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="OK"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.321985" elapsed="0.001002"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="OK"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.322987" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.323371" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>919</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.323371" elapsed="0.000000"/>
+</kw>
+<kw name="Open Or Create Workbook And Sheet" owner="Excel_Keywords">
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<status status="NOT RUN" start="2026-01-14T15:30:59.323986" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>A1</arg>
+<arg>Convert Plan Contact Name</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.324627" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>A2</arg>
+<arg>${SEARCH_CONTACT_NAME}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.324627" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>B1</arg>
+<arg>Convert Plan Appointment Date</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.324627" elapsed="0.000840"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>B2</arg>
+<arg>${TOUR_EXECUTION_DATE}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.325467" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>C1</arg>
+<arg>Convert Plan Appointment Time</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.325875" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>C2</arg>
+<arg>${TOUR_EXECUTION_TIME}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.325875" elapsed="0.000000"/>
+</kw>
+<kw name="Save Workbook" owner="ExcelSage">
+<doc>The ``Save Workbook`` keyword saves the currently active workbook. It first checks if there is an active
+workbook open, raising a ``WorkbookNotOpenError`` if no workbook is available. If a workbook is open,
+the keyword saves it to the file specified, ensuring that any changes made to the workbook are persisted.
+This keyword does not return anything, as it simply saves the workbook.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.326470" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Save"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.326470" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[contains(@text, "Contact")]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.326969" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:30:59.327467" elapsed="0.000000"/>
+</kw>
+<tag>Unit</tag>
+<status status="FAIL" start="2026-01-14T15:30:59.166450" elapsed="0.161220">No application is open</status>
+</test>
+<test id="s1-s1-t2" name="Veriy that the user can View the Executed Tour" line="285">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-14T15:31:02.332921" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-14T15:30:59.332759" elapsed="3.000162"/>
+</kw>
+<kw name="Open Workbook" owner="ExcelSage">
+<msg time="2026-01-14T15:31:02.398947" level="INFO">Workbook Excel/Smart_Data.xlsx opened successfully!</msg>
+<msg time="2026-01-14T15:31:02.398947" level="INFO">C:\Users\AmymaUsman\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\workbook\child.py:99: UserWarning: Title is more than 31 characters. Some applications may not be able to read the file
+  warnings.warn("Title is more than 31 characters. Some applications may not be able to read the file")</msg>
+<arg>${EXCEL_PATH}</arg>
+<doc>The ``Open Workbook`` keyword opens an Excel file by its name, checks if the file exists, and raises an ``ExcelFileNotFoundError`` if it doesn't. It uses openpyxl's ``load_workbook`` to load the workbook, allowing additional options via ``**kwargs``. Once the workbook is opened, it is set as the active workbook and logged. The keyword returns the loaded workbook object for further use.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.333932" elapsed="0.066092"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:02.401985" level="INFO">Cell A2 value is A2.</msg>
+<msg time="2026-01-14T15:31:02.402968" level="INFO">${CONVERT_PLAN_CONTACT_NAME} = Eddie Davila</msg>
+<var>${CONVERT_PLAN_CONTACT_NAME}</var>
+<arg>A2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.400965" elapsed="0.002003"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:02.404967" level="INFO">Cell B2 value is B2.</msg>
+<msg time="2026-01-14T15:31:02.405378" level="INFO">${CONVERT_PLAN_DATE} = 2026-01-09</msg>
+<var>${CONVERT_PLAN_DATE}</var>
+<arg>B2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.403967" elapsed="0.001411"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:02.406964" level="INFO">Cell C2 value is C2.</msg>
+<msg time="2026-01-14T15:31:02.407967" level="INFO">${CONVERT_PLAN_TIME} = 01:30</msg>
+<var>${CONVERT_PLAN_TIME}</var>
+<arg>C2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.406964" elapsed="0.001003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.409232" elapsed="0.002928"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-14T15:31:05.413728" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-14T15:31:02.412712" elapsed="3.001016"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:05.416746" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Contacts"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:05.417747" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-14T15:31:05.416746" elapsed="0.002110">No application is open</status>
+</kw>
+<msg time="2026-01-14T15:31:05.421746" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:05.422746" level="FAIL">No application is open</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Contacts"]/android.view.ViewGroup/android.view.ViewGroup</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-14T15:31:05.413728" elapsed="0.010431">No application is open</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.425175" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.425175" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.426303" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Execution"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.427172" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.427172" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-14T15:30:59.332251" elapsed="6.096430">No application is open</status>
+</test>
+<status status="FAIL" start="2026-01-14T15:30:57.179999" elapsed="8.250618"/>
+</suite>
+<suite id="s1-s2" name="Convert Tour Plan ab" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Convert_Tour_Plan TestCases\Convert_Tour_Plan_ab.robot">
+<test id="s1-s2-t1" name="Verify that the user can Convert the Tour Plan and execute the Tour (ab)" line="50">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:05.461790" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Activities"]'.</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:05.462793" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-14T15:31:05.461790" elapsed="0.003001">No application is open</status>
+</kw>
+<msg time="2026-01-14T15:31:05.467788" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:05.468876" level="FAIL">No application is open</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Activities"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-14T15:31:05.458810" elapsed="0.011466">No application is open</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Activities"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.470889" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.470889" elapsed="0.001039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[contains(@text,"Activities")]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.487264" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.489868" elapsed="0.000000"/>
+</kw>
+<kw name="Open Workbook" owner="ExcelSage">
+<arg>${EXCEL_PATH}</arg>
+<doc>The ``Open Workbook`` keyword opens an Excel file by its name, checks if the file exists, and raises an ``ExcelFileNotFoundError`` if it doesn't. It uses openpyxl's ``load_workbook`` to load the workbook, allowing additional options via ``**kwargs``. Once the workbook is opened, it is set as the active workbook and logged. The keyword returns the loaded workbook object for further use.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.492783" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_CONTACT_NAME}</var>
+<arg>A2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.493782" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_APPOINTMENT_DATE}</var>
+<arg>B2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.493782" elapsed="0.000000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<var>${SEARCH_APPOINTMENT_TIME}</var>
+<arg>C2</arg>
+<arg>${EXCEL_TOUR_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.494781" elapsed="0.000000"/>
+</kw>
+<kw name="Close Workbook" owner="ExcelSage">
+<doc>The ``Close Workbook`` keyword is responsible for closing the active workbook. It first checks if a workbook
+is currently open by verifying the presence of an active workbook. If no workbook is open, it raises a
+``WorkbookNotOpenError``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.496781" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.497954" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.498780" elapsed="0.000000"/>
+</kw>
+<kw name="Tap At Coordinates" owner="Touch_Keyword">
+<arg>65</arg>
+<arg>325</arg>
+<status status="NOT RUN" start="2026-01-14T15:31:05.498780" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.499498" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc="Tour Plan"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.499498" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:31:05.498780" elapsed="0.000718"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:31:05.497954" elapsed="0.001544"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.500508" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input"]</arg>
+<arg>${SEARCH_CONTACT_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.500700" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.501510" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=(//android.widget.TextView[contains(@text,"${SEARCH_CONTACT_NAME}")])[1]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.501510" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.502512" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("${SEARCH_CONTACT_NAME}, ${SEARCH_APPOINTMENT_DATE}, ${SEARCH_APPOINTMENT_TIME}"))</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.503575" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.504513" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Plan"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.504513" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Convert 1:1"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.505513" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.505513" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Execution"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.507384" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.508378" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<var>${TOUR_EXECUTION_DATE}</var>
+<arg>xpath=//android.widget.TextView[@text="Date"]/following-sibling::*[1]/android.view.ViewGroup</arg>
+<arg>content-desc</arg>
+<doc>Returns the element attribute using the given ``attribute``, e.g. name, value, etc.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.508378" elapsed="0.001116"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected date is: ${TOUR_EXECUTION_DATE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.509539" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<var>${TOUR_EXECUTION_DATE}</var>
+<arg>${TOUR_EXECUTION_DATE}</arg>
+<arg>result_format=%Y-%m-%d</arg>
+<arg>date_format=%d/%m/%Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.510473" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected date is: ${TOUR_EXECUTION_DATE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.511474" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.511474" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<var>${TOUR_EXECUTION_TIME}</var>
+<arg>xpath=//android.widget.TextView[@text="Time"]/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup</arg>
+<arg>content-desc</arg>
+<doc>Returns the element attribute using the given ``attribute``, e.g. name, value, etc.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.512473" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected time is: ${TOUR_EXECUTION_TIME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.512473" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.513474" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Survey"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.513752" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Survey"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.514473" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.515474" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.516022" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.516022" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Survey_name}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.516474" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Survey_name}"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.516474" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.517473" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_1}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.517473" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.518472" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.518472" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Answer_1}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.518472" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_2}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.519775" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]</arg>
+<arg>${Answer_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.520994" elapsed="0.000793"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.521787" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Question_3}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.522788" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]</arg>
+<arg>${Answer_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.524793" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.525788" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Product"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.525788" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Product"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.526788" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Product"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.527230" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.527788" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt;&gt; Product section is selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.527788" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Product_question}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.527788" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.528942" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.529998" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${Product_answer}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.529998" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Product_answer}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.530917" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.530917" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="S And T"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.531915" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="S And T"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.531915" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="S And T"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.531915" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.532915" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.TextView[@text="Question"]</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.532915" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.533913" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.533913" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:31:05.533913" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:31:05.532915" elapsed="0.000998"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${exists}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.533913" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${exists}">
+<kw name="Log" owner="BuiltIn">
+<arg>Survey exists, checking for Question element</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.535917" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//android.widget.TextView[@text="Question"]</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.535917" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_visible}">
+<kw name="Log" owner="BuiltIn">
+<arg>Question not visible, clicking SVG</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Pharma Product Distribution &amp; Demand Survey(ENT)"]/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Question is already visible, no action needed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.537918" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.001001"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:31:05.536917" elapsed="0.001001"/>
+</if>
+<status status="NOT RUN" start="2026-01-14T15:31:05.535218" elapsed="0.003124"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Survey does not exist, skipping</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.538342" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-01-14T15:31:05.538342" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2026-01-14T15:31:05.535218" elapsed="0.003124"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_1}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.538883" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath =//android.view.ViewGroup[@content-desc="Default"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.539476" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.539865" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.539865" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${S&amp;T_answer_1}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.540868" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.541864" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_2}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.541864" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer number"]</arg>
+<arg>${S&amp;T_answer_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.541864" elapsed="0.001001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.542865" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="${S&amp;T_question_3}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.542865" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Answer"]</arg>
+<arg>${S&amp;T_answer_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.543864" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.543864" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="Prio 1 - Brand Discussed"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.545247" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=(//android.widget.EditText[@text="Search Usecases.."])[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.545865" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.545865" elapsed="0.001004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup</arg>
+<arg>20s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.547265" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.547865" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Use_Case}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.547865" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.547865" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="Select Option"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.548904" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Classification}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.548904" elapsed="0.001011"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Classification}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.549915" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.549915" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.550949" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Product_message}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.551918" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Product_message}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.552920" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.552920" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.553918" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="${Product}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.555307" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.ViewGroup[@content-desc="${Product}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.555984" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.556915" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]/android.view.ViewGroup</arg>
+<arg>20s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.557480" elapsed="0.000989"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]//following-sibling::android.widget.EditText</arg>
+<arg>${Brand_Discuss_input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.558469" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.559065" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.559065" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.560031" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>519</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.560031" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Add New"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.561032" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.561349" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="${Product_Sku}, ${Product_Sku}"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.562033" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.562338" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.562338" elapsed="0.000695"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<doc>Clears the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.563033" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.563033" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath= (//android.widget.EditText[@resource-id="@undefined/input"])[2]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.564033" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.564396" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="OK"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.564396" elapsed="0.000635"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="OK"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.565031" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.565031" elapsed="0.000000"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1280</arg>
+<arg>1295</arg>
+<arg>1280</arg>
+<arg>919</arg>
+<arg>500</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.566032" elapsed="0.000000"/>
+</kw>
+<kw name="Open Or Create Workbook And Sheet" owner="Excel_Keywords">
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<status status="NOT RUN" start="2026-01-14T15:31:05.568200" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>A1</arg>
+<arg>Convert Plan Contact Name</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.568729" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>A2</arg>
+<arg>${SEARCH_CONTACT_NAME}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.570005" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>B1</arg>
+<arg>Convert Plan Appointment Date</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.570005" elapsed="0.000724"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>B2</arg>
+<arg>${TOUR_EXECUTION_DATE}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.570729" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>C1</arg>
+<arg>Convert Plan Appointment Time</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.571727" elapsed="0.000000"/>
+</kw>
+<kw name="Write To Cell" owner="ExcelSage">
+<arg>C2</arg>
+<arg>${TOUR_EXECUTION_TIME}</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Write To Cell`` keyword writes a specified value into a cell in the active workbook. It first checks if
+a valid ``sheet_name`` is provided; if not, it defaults to the currently active sheet.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.571727" elapsed="0.000000"/>
+</kw>
+<kw name="Save Workbook" owner="ExcelSage">
+<doc>The ``Save Workbook`` keyword saves the currently active workbook. It first checks if there is an active
+workbook open, raising a ``WorkbookNotOpenError`` if no workbook is available. If a workbook is open,
+the keyword saves it to the file specified, ensuring that any changes made to the workbook are persisted.
+This keyword does not return anything, as it simply saves the workbook.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.572730" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.ViewGroup[@content-desc="Save"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.572730" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[contains(@text, "Contact")]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.574090" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:05.574090" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-14T15:31:05.457192" elapsed="0.117918">No application is open</status>
+</test>
+<test id="s1-s2-t2" name="Verify that the user can View the Executed Tour (ab)" line="285">
+<kw name="Open Workbook" owner="ExcelSage">
+<msg time="2026-01-14T15:31:05.600707" level="INFO">Workbook Excel/Smart_Data.xlsx opened successfully!</msg>
+<arg>${EXCEL_PATH}</arg>
+<doc>The ``Open Workbook`` keyword opens an Excel file by its name, checks if the file exists, and raises an ``ExcelFileNotFoundError`` if it doesn't. It uses openpyxl's ``load_workbook`` to load the workbook, allowing additional options via ``**kwargs``. Once the workbook is opened, it is set as the active workbook and logged. The keyword returns the loaded workbook object for further use.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.576393" elapsed="0.024314"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:05.601708" level="INFO">Cell A2 value is A2.</msg>
+<msg time="2026-01-14T15:31:05.601708" level="INFO">${CONVERT_PLAN_CONTACT_NAME} = Eddie Davila</msg>
+<var>${CONVERT_PLAN_CONTACT_NAME}</var>
+<arg>A2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.600707" elapsed="0.001001"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:05.602708" level="INFO">Cell B2 value is B2.</msg>
+<msg time="2026-01-14T15:31:05.602708" level="INFO">${CONVERT_PLAN_DATE} = 2026-01-09</msg>
+<var>${CONVERT_PLAN_DATE}</var>
+<arg>B2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.601708" elapsed="0.001000"/>
+</kw>
+<kw name="Get Cell Value" owner="ExcelSage">
+<msg time="2026-01-14T15:31:05.603707" level="INFO">Cell C2 value is C2.</msg>
+<msg time="2026-01-14T15:31:05.603707" level="INFO">${CONVERT_PLAN_TIME} = 01:30</msg>
+<var>${CONVERT_PLAN_TIME}</var>
+<arg>C2</arg>
+<arg>${EXCEL_CONVERT_PLAN_SHEET}</arg>
+<doc>The ``Get Cell Value`` keyword retrieves the value of a specified cell from a given sheet in the active
+workbook. If no sheet name is provided, it defaults to the currently active sheet.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.602708" elapsed="0.000999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${CONVERT_PLAN_CONTACT_NAME}\n${CONVERT_PLAN_DATE}\n${CONVERT_PLAN_TIME}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.603707" elapsed="0.001000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-14T15:31:08.604940" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-14T15:31:05.604707" elapsed="3.000233"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:08.609835" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Contacts"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-14T15:31:08.609835" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-14T15:31:08.609835" elapsed="0.002865">No application is open</status>
+</kw>
+<msg time="2026-01-14T15:31:08.617833" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:08.619840" level="FAIL">No application is open</msg>
+<arg>xpath=//android.view.ViewGroup[@content-desc="Contacts"]/android.view.ViewGroup/android.view.ViewGroup</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-14T15:31:08.604940" elapsed="0.017878">No application is open</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:08.623221" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>android=new UiScrollable(new UiSelector().scrollable(true))\.scrollIntoView(new UiSelector().descriptionContains("${CONVERT_PLAN_DATE}, ${CONVERT_PLAN_TIME}"))</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:08.623780" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:08.623780" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Tour Execution"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:08.624745" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-14T15:31:08.624745" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-14T15:31:05.576102" elapsed="3.049639">No application is open</status>
+</test>
+<status status="FAIL" start="2026-01-14T15:31:05.431619" elapsed="3.195124"/>
+</suite>
+<status status="FAIL" start="2026-01-14T15:30:57.122691" elapsed="11.505983"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Unit</stat>
+</tag>
+<suite>
+<stat name="Convert Tour Plan TestCases" id="s1" pass="0" fail="4" skip="0">Convert Tour Plan TestCases</stat>
+<stat name="Convert Tour Plan" id="s1-s1" pass="0" fail="2" skip="0">Convert Tour Plan TestCases.Convert Tour Plan</stat>
+<stat name="Convert Tour Plan ab" id="s1-s2" pass="0" fail="2" skip="0">Convert Tour Plan TestCases.Convert Tour Plan ab</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-14T15:30:59.182848" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:05.421746" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:05.467788" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-14T15:31:08.617833" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

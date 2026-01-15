@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-01-14T15:30:28.076886" rpa="false" schemaversion="5">
+<suite id="s1" name="Open App TestCases" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Open_App TestCases">
+<suite id="s1-s1" name="App" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Open_App TestCases\App.robot">
+<test id="s1-s1-t1" name="Verify that the user can Open SmartForce application" line="24">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${UI_AUTOMATION}</arg>
+<arg>noReset=true</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-01-14T15:30:29.008798" elapsed="17.300997"/>
+</kw>
+<doc>Launch SmartRep app, switch to Sandbox, login and open Tour Plan.</doc>
+<status status="PASS" start="2026-01-14T15:30:29.006929" elapsed="17.303867"/>
+</test>
+<status status="PASS" start="2026-01-14T15:30:28.146365" elapsed="18.177805"/>
+</suite>
+<status status="PASS" start="2026-01-14T15:30:28.081830" elapsed="18.244879"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Open App TestCases" id="s1" pass="1" fail="0" skip="0">Open App TestCases</stat>
+<stat name="App" id="s1-s1" pass="1" fail="0" skip="0">Open App TestCases.App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
