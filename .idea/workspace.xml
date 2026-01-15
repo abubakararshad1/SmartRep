@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ded302c-85c6-4d43-b9ae-46e9a841fdc6" name="Changes" comment="code change" />
+    <list default="true" id="3ded302c-85c6-4d43-b9ae-46e9a841fdc6" name="Changes" comment="code change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coaching/Coaching.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convert_Tour_Plan/Convert_Tour_Plan.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convert_Tour_Plan/Convert_Tour_Plan_ab.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DCR/Account-DCR.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DCR/Contact-DCR.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event/Activities.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event/Event.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excel/Excel_Keywords.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excel/Smart_Data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expenses/Expenses.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Output/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Download_Presentation.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Execute_Tour_With_Presentation.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/View_Presentation.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SampleStocks/Ordersamplestock.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SampleStocks/Removesamplestock.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SampleStocks/Varaibles.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartForce_Login/User_Login.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey/Survey_Without_Call.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOT/TOT_Calender.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tour_Plan/Tour_Plan.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands" beforeDir="false" afterPath="$PROJECT_DIR$/commands" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +66,9 @@
     &quot;accountId&quot;: &quot;44d69b72-2911-43b7-81d3-4ccaaf2a6494&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DCR TestCases/Account-DCR.robot" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,12 +81,17 @@
   "keyToString": {
     "Robot Framework.run [Contact DCR].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/omar.moazzam/PycharmProjects/SmartRepGit/Coaching",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Combine",
+    "last_opened_file_path": "C:/Users/AmymaUsman/PycharmProjects/SmartRep",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AmymaUsman\PycharmProjects\SmartRep" />
+      <recent name="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Automation" />
       <recent name="C:\Users\omar.moazzam\PycharmProjects\SmartRepGit\Coaching" />
       <recent name="C:\Users\omar.moazzam\PycharmProjects\SmartRepGit" />
       <recent name="C:\Users\omar.moazzam\PycharmProjects\SmartRepGit\TestCase" />
@@ -157,7 +192,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+        <option value="bundled-python-sdk-a101402ee41c-968fe969f28a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.28238.29" />
       </set>
     </attachedChunks>
   </component>
