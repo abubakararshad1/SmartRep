@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3ded302c-85c6-4d43-b9ae-46e9a841fdc6" name="Changes" comment="code change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation/Touch_Keyword/Touch_Keyword.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation/Touch_Keyword/practice.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/Convert_Tour_Plan_Folder/Convert_Tour_Plan_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/Convert_Tour_Plan_Folder/Convert_Tour_Plan_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/Convert_Tour_Plan_Folder/Convert_Tour_Plan_ab_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/Convert_Tour_Plan_Folder/Convert_Tour_Plan_ab_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/Presentation_Folder/Execute_Tour_With_Presentation_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/Presentation_Folder/Execute_Tour_With_Presentation_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/Presentation_Folder/View_Presentation_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/Presentation_Folder/View_Presentation_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/SampleStocks_Folder/Removesamplestock_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/SampleStocks_Folder/Removesamplestock_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation/Tour_Plan_Folder/Tour_Plan_TestCases.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/Tour_Plan_Folder/Tour_Plan_TestCases.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Output/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Output/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768476539811</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="code change">
+      <option name="closed" value="true" />
+      <created>1768477285551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1768477285551</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

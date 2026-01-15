@@ -57,11 +57,11 @@ Verify that the user can create Tour Plan from the Contact tab
     Sleep    5s
 
     # Swipe on hour wheel to set desired hour
-    Swipe    start_x=1428    start_y=709    end_x=1280    end_y=0    duration=200
+    Swipe    start_x=1428    start_y=709    end_x=1280    end_y=0    duration=200ms
     Sleep    5s
 
     # Swipe on minute wheel to set desired minute
-    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=200
+    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=200ms
     Sleep    5s
 
     # Confirm time selection

@@ -54,11 +54,11 @@ Verify tha the user can Executes a Tour with selected contact, enters tour execu
     Sleep    5s
 
     # Swipe to set hour
-    Swipe    start_x=1575    start_y=709    end_x=1280    end_y=0    duration=500
+    Swipe    start_x=1575    start_y=709    end_x=1280    end_y=0    duration=500ms
     Sleep    2s
 
     # Swipe to set minutes
-    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=500
+    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=500ms
     Sleep    2s
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Select"]
     Sleep    5s
@@ -76,15 +76,15 @@ Verify tha the user can Executes a Tour with selected contact, enters tour execu
     Sleep    5s
 
     # Swipe left through presentation slides
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
 
     # Swipe right once
-    Swipe    start_x=300    start_y=804    end_x=500    end_y=804    duration=100
+    Swipe    start_x=300    start_y=804    end_x=500    end_y=804    duration=100ms
     Sleep    10s
 
     # Double tap to pause presentation
@@ -100,7 +100,7 @@ Verify tha the user can Executes a Tour with selected contact, enters tour execu
     Sleep    5s
 
     # Swipe one more slide
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
 
     # Double tap to finish presentation
@@ -122,10 +122,10 @@ Verify tha the user can Executes a Tour with selected contact, enters tour execu
     Write To Cell    C2    ${TOUR_EXECUTION_TIME}     ${EXCEL_TOUR_EXE_WITH_PRES_SHEET}
     Save Workbook
     # Scroll to bottom and Save
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=819    duration=800
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=800ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=819    duration=800ms
 
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Save"]
 

@@ -23,15 +23,15 @@ Verify that the user can View a selected presentation from the Presentations tab
     Sleep    5s
 
     # Swipe left to move through slides
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    10s
 
     # Swipe right to go back to a previous slide
-    Swipe    start_x=300    start_y=804    end_x=500    end_y=804    duration=100
+    Swipe    start_x=300    start_y=804    end_x=500    end_y=804    duration=100ms
     Sleep    10s
 
     # Double tap to pause the presentation playback
@@ -49,7 +49,7 @@ Verify that the user can View a selected presentation from the Presentations tab
     Sleep    5s
 
     # Swipe to next slide again during playback
-    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100
+    Swipe    start_x=2300    start_y=804    end_x=2000    end_y=804    duration=100ms
     Sleep    5s
 
     # Double tap to bring up the finish option

@@ -119,7 +119,7 @@ Verify that the user can Convert the Tour Plan and execute the Tour
 
 
 #   Swipe to Show Survey_Folder Questions
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
 
     Sleep    2s
 
@@ -211,7 +211,7 @@ Verify that the user can Convert the Tour Plan and execute the Tour
     Sleep    5s
 
     #   Swipe to Show Brand Discussion Section
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
 #    Swipe    1280    919    1280    519    500
 
     # Fill Brand discussion
@@ -242,10 +242,10 @@ Verify that the user can Convert the Tour Plan and execute the Tour
     Input Text    xpath=(//android.view.ViewGroup[@resource-id="@undefined/container"])[3]//following-sibling::android.widget.EditText    ${Brand_Discuss_input_text}
 
     # Swipe to reach the Sample delivery section
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=519    duration=500ms
 
     # Sample delivery section
     Click Element    xpath=//android.view.ViewGroup[@content-desc="Add New"]
@@ -265,7 +265,7 @@ Verify that the user can Convert the Tour Plan and execute the Tour
     Sleep    5s
 
     # Swipe to reach the Sample delivery Product section
-    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=919    duration=500
+    Swipe    start_x=1280    start_y=1295    end_x=1280    end_y=919    duration=500ms
 
     Open Or Create Workbook And Sheet       ${EXCEL_CONVERT_PLAN_SHEET}
 #   Rename Sheet    Sheet   ${EXCEL_EVENT_SHEET}

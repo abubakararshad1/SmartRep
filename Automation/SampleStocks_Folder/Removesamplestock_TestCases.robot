@@ -14,7 +14,7 @@ Verify that the user can Remove sample stock.
     Click Element    xpath=//android.widget.TextView[@text="${PRODUCT_SKUS}"]
 #swipe
     Sleep    2s
-    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=800   # 2 swipes
+    Swipe    start_x=1575    start_y=891    end_x=1280    end_y=0    duration=800ms   # 2 swipes
 #click on add btn in remove stock
     Sleep    2s
     Click Element    xpath=(//android.view.ViewGroup[@content-desc="Add New"])[1]
