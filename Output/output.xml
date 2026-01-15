@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-01-15T16:55:13.675230" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-01-15T17:03:03.833947" rpa="false" schemaversion="5">
 <suite id="s1" name="SmartRep">
 <suite id="s1-s1" name="App TestCases" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Automation\App_Folder\App_TestCases.robot">
 <test id="s1-s1-t1" name="Verify that the user can Launch SmartRep app, switch to Sandbox, login and open Tour Plan." line="24">
@@ -18,40 +18,40 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-01-15T16:55:15.054846" elapsed="10.899445"/>
+<status status="PASS" start="2026-01-15T17:03:05.817182" elapsed="12.367804"/>
 </kw>
 <doc>Verify that the user can Launch SmartRep app, switch to Sandbox, login and open Tour Plan.</doc>
-<status status="PASS" start="2026-01-15T16:55:15.052842" elapsed="10.902448"/>
+<status status="PASS" start="2026-01-15T17:03:05.814182" elapsed="12.371677"/>
 </test>
-<status status="PASS" start="2026-01-15T16:55:14.088233" elapsed="11.868051"/>
+<status status="PASS" start="2026-01-15T17:03:03.921234" elapsed="14.265755"/>
 </suite>
 <suite id="s1-s2" name="Removesamplestock TestCases" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Automation\SampleStocks_Folder\Removesamplestock_TestCases.robot">
 <test id="s1-s2-t1" name="Verify that the user can Remove sample stock." line="7">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-15T16:55:25.969289" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
-<msg time="2026-01-15T16:55:33.620164" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
+<msg time="2026-01-15T17:03:18.203029" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
+<msg time="2026-01-15T17:03:27.660664" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-15T16:55:25.966290" elapsed="7.653874"/>
+<status status="PASS" start="2026-01-15T17:03:18.200541" elapsed="9.460123"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-15T16:55:35.628612" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-15T17:03:29.663174" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-15T16:55:33.627162" elapsed="2.001450"/>
+<status status="PASS" start="2026-01-15T17:03:27.661934" elapsed="2.001240"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-15T16:55:35.631613" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Beclometasone nasal spray 20ml"]'.</msg>
-<msg time="2026-01-15T16:55:40.572664" level="INFO">xpath criteria: //android.widget.TextView[@text="Beclometasone nasal spray 20ml"]</msg>
+<msg time="2026-01-15T17:03:29.681054" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Beclometasone nasal spray 20ml"]'.</msg>
+<msg time="2026-01-15T17:03:34.728570" level="INFO">xpath criteria: //android.widget.TextView[@text="Beclometasone nasal spray 20ml"]</msg>
 <arg>xpath=//android.widget.TextView[@text="${PRODUCT_SKUS}"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-15T16:55:35.628612" elapsed="4.944052"/>
+<status status="PASS" start="2026-01-15T17:03:29.678054" elapsed="5.050516"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-15T16:55:42.577987" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-15T17:03:36.729879" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-15T16:55:40.576665" elapsed="2.001322"/>
+<status status="PASS" start="2026-01-15T17:03:34.729547" elapsed="2.000332"/>
 </kw>
 <kw name="Swipe" owner="AppiumLibrary">
 <arg>start_x=1575</arg>
@@ -60,424 +60,360 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <arg>end_y=0</arg>
 <arg>duration=800ms</arg>
 <doc>Swipes from one point to another point, for an optional ``duration``.</doc>
-<status status="PASS" start="2026-01-15T16:55:42.590989" elapsed="7.467884"/>
+<status status="PASS" start="2026-01-15T17:03:36.730851" elapsed="7.466518"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-15T16:55:52.061251" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-15T17:03:46.207207" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-15T16:55:50.059874" elapsed="2.001377"/>
+<status status="PASS" start="2026-01-15T17:03:44.205352" elapsed="2.001855"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-15T16:55:52.063251" level="INFO">Clicking element 'xpath=(//android.view.ViewGroup[@content-desc="Add New"])[1]'.</msg>
-<msg time="2026-01-15T16:55:57.028456" level="INFO">xpath criteria: (//android.view.ViewGroup[@content-desc="Add New"])[1]</msg>
+<msg time="2026-01-15T17:03:46.215062" level="INFO">Clicking element 'xpath=(//android.view.ViewGroup[@content-desc="Add New"])[1]'.</msg>
+<msg time="2026-01-15T17:03:52.807758" level="INFO">xpath criteria: (//android.view.ViewGroup[@content-desc="Add New"])[1]</msg>
 <arg>xpath=(//android.view.ViewGroup[@content-desc="Add New"])[1]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-15T16:55:52.061251" elapsed="4.967205"/>
+<status status="PASS" start="2026-01-15T17:03:46.208444" elapsed="6.599314"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-15T16:55:59.029957" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-15T17:03:54.809066" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-15T16:55:57.028456" elapsed="2.001501"/>
+<status status="PASS" start="2026-01-15T17:03:52.808222" elapsed="2.000844"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-01-15T16:55:59.046962" level="INFO">Typing text '20' into text field 'xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]'</msg>
-<msg time="2026-01-15T16:56:03.655920" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]</msg>
+<msg time="2026-01-15T17:03:54.845597" level="INFO">Typing text '20' into text field 'xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]'</msg>
+<msg time="2026-01-15T17:04:00.986884" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]</msg>
 <arg>xpath=//android.widget.EditText[@resource-id="@undefined/input" and @text="Number of samples removed from the stock"]</arg>
 <arg>${REMOVED_STOCK_QTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-15T16:55:59.043960" elapsed="4.612951"/>
+<status status="PASS" start="2026-01-15T17:03:54.843587" elapsed="6.143297"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-15T16:56:05.664872" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-15T17:04:02.989089" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-15T16:56:03.662913" elapsed="2.001959"/>
+<status status="PASS" start="2026-01-15T17:04:00.987872" elapsed="2.001417"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2026-01-15T16:56:12.101938" level="FAIL">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2026-01-15T16:56:10.059134" elapsed="2.050803">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</status>
-</kw>
-<msg time="2026-01-15T16:56:12.111942" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
-<msg time="2026-01-15T16:56:12.114938" level="INFO">xpath criteria: //android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup</msg>
-<msg time="2026-01-15T16:56:12.114938" level="FAIL">WebDriverException: Message: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getAttribute (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:26:5)
-    at AndroidUiautomator2Driver.elementDisplayed (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:40:17)</msg>
+<msg time="2026-01-15T17:04:07.473217" level="INFO">xpath criteria: //android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-01-15T16:56:05.665743" elapsed="6.451197">WebDriverException: Message: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getAttribute (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:26:5)
-    at AndroidUiautomator2Driver.elementDisplayed (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:40:17)</status>
+<status status="PASS" start="2026-01-15T17:04:02.989289" elapsed="4.484931"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:07.477229" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup'.</msg>
+<msg time="2026-01-15T17:04:13.410859" level="INFO">xpath criteria: //android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.TextView[@text="Stock reduction reason"]//following-sibling::android.view.ViewGroup</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.116940" elapsed="0.000999"/>
+<status status="PASS" start="2026-01-15T17:04:07.474220" elapsed="5.936639"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:19.504893" level="INFO">xpath criteria: //android.widget.TextView[@text="Incorrect Delivery"]</msg>
 <arg>xpath=//android.widget.TextView[@text="Incorrect Delivery"]</arg>
 <arg>5s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.117939" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:13.413479" elapsed="6.092419"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:19.509899" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Incorrect Delivery"]'.</msg>
+<msg time="2026-01-15T17:04:24.494186" level="INFO">xpath criteria: //android.widget.TextView[@text="Incorrect Delivery"]</msg>
 <arg>xpath=//android.widget.TextView[@text="Incorrect Delivery"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.117939" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:19.506900" elapsed="4.987286"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:04:26.509040" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.118936" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:24.507917" elapsed="2.001123"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:26.520178" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Save"]'.</msg>
+<msg time="2026-01-15T17:04:31.302548" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Save"]</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Save"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.118936" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:26.510338" elapsed="4.793211"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:04:36.335785" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:12.118936" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:31.335457" elapsed="5.000702"/>
 </kw>
 <doc>Verify that the user can Remove sample stock.</doc>
 <tag>Smoke</tag>
-<status status="FAIL" start="2026-01-15T16:55:25.965287" elapsed="46.153649">WebDriverException: Message: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /element/00000000-0000-016c-ffff-ffff000633a3/attribute/displayed' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getAttribute (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:26:5)
-    at AndroidUiautomator2Driver.elementDisplayed (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:40:17)</status>
+<status status="PASS" start="2026-01-15T17:03:18.199243" elapsed="78.137833"/>
 </test>
-<status status="FAIL" start="2026-01-15T16:55:25.957284" elapsed="46.162651"/>
+<status status="PASS" start="2026-01-15T17:03:18.187912" elapsed="78.152168"/>
 </suite>
 <suite id="s1-s3" name="Ordersamplestock TestCases" source="C:\Users\AmymaUsman\PycharmProjects\SmartRep\Automation\SampleStocks_Folder\Ordersamplestock_TestCases.robot">
 <test id="s1-s3-t1" name="Verify that the user can Order sample stock." line="13">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-15T16:56:12.135939" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2026-01-15T16:56:16.204250" level="FAIL">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2026-01-15T16:56:14.172646" elapsed="2.035127">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</status>
-</kw>
-<msg time="2026-01-15T16:56:16.209777" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
-<msg time="2026-01-15T16:56:16.210774" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
-<msg time="2026-01-15T16:56:16.210774" level="FAIL">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
-    at doFind (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
-    at wrappedCondFn (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</msg>
+<msg time="2026-01-15T17:04:36.383372" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
+<msg time="2026-01-15T17:04:43.614782" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="FAIL" start="2026-01-15T16:56:12.133939" elapsed="4.079836">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
-    at doFind (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
-    at wrappedCondFn (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-01-15T17:04:36.372754" elapsed="7.242028"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:43.619548" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup'.</msg>
+<msg time="2026-01-15T17:04:49.997223" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.218776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:43.616779" elapsed="6.380444"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:04:52.998693" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.219775" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:49.997777" elapsed="3.000916"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${PRODUCT_SKUS}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.220775" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:52.999349" elapsed="0.001032"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-01-15T17:04:53.008324" level="INFO">Typing text 'Beclometasone nasal spray 20ml' into text field 'xpath=//android.widget.EditText[@resource-id="@undefined/input"]'</msg>
+<msg time="2026-01-15T17:04:58.124223" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="@undefined/input"]</msg>
 <arg>xpath=//android.widget.EditText[@resource-id="@undefined/input"]</arg>
 <arg>${PRODUCT_SKUS}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.221773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:53.001050" elapsed="5.123173"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:05:03.125676" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.222775" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:04:58.125224" elapsed="5.000452"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:05:08.467755" level="INFO">xpath criteria: //android.view.ViewGroup[contains(@content-desc,"Beclometasone nasal spray 20ml")]</msg>
 <arg>xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.223776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:03.126674" elapsed="5.341081"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:05:13.468858" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.223776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:08.468752" elapsed="5.000106"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:05:13.473917" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[contains(@content-desc,"Beclometasone nasal spray 20ml")]'.</msg>
+<msg time="2026-01-15T17:05:18.534980" level="INFO">xpath criteria: //android.view.ViewGroup[contains(@content-desc,"Beclometasone nasal spray 20ml")]</msg>
 <arg>xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.223776" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[contains(@text,"SampleStock")]</arg>
-<arg>10s</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.224776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:13.469894" elapsed="5.065086"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:05:23.537044" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.224776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:18.535980" elapsed="5.001064"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Order for Stock"))</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.225776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:23.537044" elapsed="25.594755"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:05:49.136888" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Order for Stock"]//following-sibling::android.view.ViewGroup'.</msg>
+<msg time="2026-01-15T17:05:56.142238" level="INFO">xpath criteria: //android.widget.TextView[@text="Order for Stock"]//following-sibling::android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.TextView[@text="Order for Stock"]//following-sibling::android.view.ViewGroup</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.225776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:49.132800" elapsed="7.009438"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:05:58.143724" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.226773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:56.143614" elapsed="2.000110"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-01-15T17:05:58.180827" level="INFO">Typing text '50' into text field 'xpath=//android.widget.EditText[@resource-id="@undefined/input"]'</msg>
+<msg time="2026-01-15T17:06:03.610079" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="@undefined/input"]</msg>
 <arg>xpath=//android.widget.EditText[@resource-id="@undefined/input"]</arg>
 <arg>${ORDER_FOR_STOCK}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.227773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:05:58.178291" elapsed="5.432381"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:05.611729" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.228772" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:03.610672" elapsed="2.001057"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:05.618363" level="INFO">Clicking element 'xpath=(//android.widget.TextView[@text="Default"])[1]'.</msg>
+<msg time="2026-01-15T17:06:10.806428" level="INFO">xpath criteria: (//android.widget.TextView[@text="Default"])[1]</msg>
 <arg>xpath=(//android.widget.TextView[@text="Default"])[1]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.228772" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:05.612722" elapsed="5.193706"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:15.807640" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.229773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:10.806428" elapsed="5.001212"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:20.386614" level="INFO">xpath criteria: //android.widget.ScrollView/android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.ScrollView/android.view.ViewGroup</arg>
 <arg>20s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.230776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:15.809507" elapsed="4.578096"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:25.388975" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.230776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:20.388606" elapsed="5.000369"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:25.398540" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Active"]'.</msg>
+<msg time="2026-01-15T17:06:30.135463" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Active"]</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="${SAMPLE_STATUS}"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.230776" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:25.390560" elapsed="4.744903"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:40.138183" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.231777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:30.136911" elapsed="10.001272"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:40.145272" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Samples Order Date"]/following-sibling::android.view.ViewGroup/android.widget.TextView'.</msg>
+<msg time="2026-01-15T17:06:45.460322" level="INFO">xpath criteria: //android.widget.TextView[@text="Samples Order Date"]/following-sibling::android.view.ViewGroup/android.widget.TextView</msg>
 <arg>xpath=//android.widget.TextView[@text="Samples Order Date"]/following-sibling::android.view.ViewGroup/android.widget.TextView</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.231777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:40.139155" elapsed="5.321167"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:48.464064" level="INFO">Slept 3 seconds.</msg>
 <arg>3S</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.232778" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:45.463969" elapsed="3.000095"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:53.075563" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.233774" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:48.464064" elapsed="4.611499"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:06:58.077121" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.233774" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:53.076551" elapsed="5.000570"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:06:58.080851" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="15"]'.</msg>
+<msg time="2026-01-15T17:07:03.572453" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="15"]</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="${SAMPLE_ORDER_DATE}"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.234777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:06:58.078125" elapsed="5.494328"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:07:08.607384" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.235773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:03.606767" elapsed="5.000617"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:07:13.522617" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, "Default")]/..</msg>
 <arg>xpath=//android.widget.TextView[contains(@text, "Default")]/..</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.236774" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:08.608791" elapsed="4.913826"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:07:16.523868" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.236774" elapsed="0.001001"/>
+<status status="PASS" start="2026-01-15T17:07:13.523741" elapsed="3.000127"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:07:16.530114" level="INFO">Clicking element 'xpath=//android.widget.TextView[contains(@text, "Default")]/..'.</msg>
+<msg time="2026-01-15T17:07:21.141039" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, "Default")]/..</msg>
 <arg>xpath=//android.widget.TextView[contains(@text, "Default")]/..</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.237775" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:16.524866" elapsed="4.616173"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:07:31.142913" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.237775" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:21.142326" elapsed="10.000587"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:07:35.492390" level="INFO">xpath criteria: //android.widget.ScrollView/android.view.ViewGroup</msg>
 <arg>xpath=//android.widget.ScrollView/android.view.ViewGroup</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.238773" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:31.143439" elapsed="4.348951"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:07:40.494546" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.239777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:35.494015" elapsed="5.000531"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:07:40.498547" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Detailing"]'.</msg>
+<msg time="2026-01-15T17:07:45.476085" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Detailing"]</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="${PLANNED_SAMPLES}"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.239777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:40.495674" elapsed="4.980411"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-15T17:07:50.477634" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.239777" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:45.477248" elapsed="5.000386"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-15T17:07:50.483636" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="Save"]'.</msg>
+<msg time="2026-01-15T17:07:55.938857" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Save"]</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Save"]</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.240772" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:50.478682" elapsed="5.460175"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-15T17:08:01.471648" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</msg>
 <arg>xpath=//android.view.ViewGroup[@content-desc="Sample Stock"]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>10s</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-15T16:56:16.240772" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-15T17:07:55.953449" elapsed="5.518199"/>
 </kw>
 <doc>Verify that the user can Order sample stock.</doc>
 <tag>Unit</tag>
-<status status="FAIL" start="2026-01-15T16:56:12.131939" elapsed="4.108833">WebDriverException: Message: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'POST /elements' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
-    at doFind (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
-    at wrappedCondFn (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
-    at spin (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
-    at waitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
-    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
-    at AndroidUiautomator2Driver.findElOrEls (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
-    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
-    at AndroidUiautomator2Driver.findElements (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+<status status="PASS" start="2026-01-15T17:04:36.370764" elapsed="205.101881"/>
 </test>
-<status status="FAIL" start="2026-01-15T16:56:12.120937" elapsed="4.120835"/>
+<status status="PASS" start="2026-01-15T17:04:36.342448" elapsed="205.131198"/>
 </suite>
-<status status="FAIL" start="2026-01-15T16:55:13.707233" elapsed="62.537540"/>
+<status status="PASS" start="2026-01-15T17:03:03.840595" elapsed="297.634187"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="2" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Smoke</stat>
-<stat pass="0" fail="1" skip="0">Unit</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Unit</stat>
 </tag>
 <suite>
-<stat name="SmartRep" id="s1" pass="1" fail="2" skip="0">SmartRep</stat>
+<stat name="SmartRep" id="s1" pass="3" fail="0" skip="0">SmartRep</stat>
 <stat name="App TestCases" id="s1-s1" pass="1" fail="0" skip="0">SmartRep.App TestCases</stat>
-<stat name="Removesamplestock TestCases" id="s1-s2" pass="0" fail="1" skip="0">SmartRep.Removesamplestock TestCases</stat>
-<stat name="Ordersamplestock TestCases" id="s1-s3" pass="0" fail="1" skip="0">SmartRep.Ordersamplestock TestCases</stat>
+<stat name="Removesamplestock TestCases" id="s1-s2" pass="1" fail="0" skip="0">SmartRep.Removesamplestock TestCases</stat>
+<stat name="Ordersamplestock TestCases" id="s1-s3" pass="1" fail="0" skip="0">SmartRep.Ordersamplestock TestCases</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-01-15T16:56:12.111942" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
-<msg time="2026-01-15T16:56:16.209777" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-Stacktrace:
-UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
-    at UIA2Proxy.command (C:\Users\AmymaUsman\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at AndroidUiautomator2Driver.getScreenshot (C:\Users\AmymaUsman\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
 </errors>
 </robot>

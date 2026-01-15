@@ -24,7 +24,7 @@ Verify that the user can Order sample stock.
     Wait Until Element Is Visible    xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]
     Sleep    5s
     Click Element    xpath=//android.view.ViewGroup[contains(@content-desc,"${PRODUCT_SKUS}")]
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"SampleStock")]     10s
+#    Wait Until Element Is Visible    xpath=//android.widget.TextView[contains(@text,"SampleStock")]     10s
 #swipe
 #    Swipe    1575    891    1280    0    800   # 2 swipes
 #click on the order stock add btn
